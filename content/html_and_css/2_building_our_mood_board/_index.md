@@ -24,9 +24,8 @@ For this tutorial let's start by adding some structure to our page. Go ahead and
     <title>She Codes</title>
 </head>
 
-<body>
-<!-- Your content goes here -->
- <h1>Mood Board</h1>
+<body> <!-- Your content goes here -->
+    <h1>[Your Name] Mood Board ❤</h1>
 </body>
 </html>
 ```
@@ -45,11 +44,10 @@ Let's add some more sections to our website starting with our header.
     <title>She Codes</title>
 </head>
 
-<body>
-<!-- Your content goes here -->
-<header>
- <h1>Mood Board</h1>
-</header>
+<body> <!-- Your content goes here -->
+    <header> <!-- Your header section -->
+        <h1>[Your Name] Mood Board ❤</h1>
+    </header>
 </body>
 </html>
 ```
@@ -66,12 +64,10 @@ Next let's add a `main` section, which doesn't contain any content yet, but it w
     <title>She Codes</title>
 </head>
 
-<body>
-<!-- Your content goes here -->
-<header>
- <h1>Mood Board</h1>
-</header>
-
+<body> <!-- Your content goes here -->
+    <header> <!-- Your header section -->
+        <h1>[Your Name] Mood Board ❤</h1>
+    </header>
 <main>
 </main>
 
@@ -89,17 +85,15 @@ Finally lets add in our footer, and we will add some content while we are here.
     <title>She Codes</title>
 </head>
 
-<body>
-<!-- Your content goes here -->
-<header>
- <h1>Mood Board</h1>
-</header>
-
+<body> <!-- Your content goes here -->
+    <header> <!-- Your header section -->
+        <h1>[Your Name] Mood Board ❤</h1>
+    </header>
 <main>
 </main>
 
 <footer>
-    <p>Created with ❤️ by Your Name</p>
+    <p>Created with ❤ by Your Name</p>
 </footer>
 
 </body>
