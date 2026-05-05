@@ -20,16 +20,11 @@ For example:
 
 ```html
 
-<body>
-<!-- Your content goes here -->
-<main>
-
-    <h2>2025</h2>
-
-    <h3>Personal Goals</h3>
-
-</main>
-
+<body> <!-- Your content goes under here -->
+    <main>
+        <h2>2026</h2>
+        <h3>Personal Goals</h3>
+    </main>
 </body>
 </html>
 
@@ -74,20 +69,19 @@ A bit further down let's add some text into our `main` replacing our `h3`
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
-    <!-- Your content goes here -->
+<body> <!-- Your content goes under here -->
     <header>
-        <h1>Mood Board</h1>
+        <h1>[Your Name] Mood Board ❤</h1>
         <p>A place for inspiration and creativity</p>
     </header>
 
     <main>
-        <h2>2025</h2>
+        <h2>2026 IS MY YEAR</h2>
         <p>“Creativity takes courage.”</p>
     </main>
 
     <footer>
-        <p>Created with ❤️ by Your Name</p>
+        <p>Created with ❤ by [Your Name]</p>
     </footer>
 
 </body>
