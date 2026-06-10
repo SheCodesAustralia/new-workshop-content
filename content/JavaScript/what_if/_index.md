@@ -45,7 +45,7 @@ Let's break that down! The `if` tells JavaScript we are about to use an if state
 
 {{% /notice %}}
 
-Now when you hit **Start** your cupcake will continually pop up and down - but only on the same hole and it's happening so fast that we can't even see it! We'll fix this up in the next step by randomising which hole it pops up from. For now, to test that it really is working, let's add a message to the console.
+Now, when you hit **Start**, your cupcake will continually pop up and down - but only on the same hole, and it's happening so fast that we can't even see it! We'll fix this up in the next step by randomising which hole it pops up from. For now, to test that it really is working, let's add a message to the console.
 
 {{% notice style="warning" title="Before - Replace this code" %}}
 ```js
@@ -77,7 +77,7 @@ function popUp() {
 		if (timeUp == false) {
 			popUp();
 		}
-	}, time)
+	}, time);
 }
 ```
 {{% /notice %}}

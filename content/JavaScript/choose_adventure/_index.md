@@ -8,7 +8,7 @@ chapter: false
 
 Congratulations, you have built a fully functioning Cupcake Smash game! And that's something to be really proud of!
 
-How did it feel see your game come to life?
+How did it feel to see your game come to life?
 
 If you're feeling extra proud, why not share your game with the world? 
 
@@ -33,18 +33,18 @@ Why stop at 10 seconds? You could create multiple levels with variations each ti
 
 #### Variable Scoring
 
-You might have noticed that there are different cupcakes that display - you could randomise which cupcake shows each time, and give the different cupcakes a different number of points each. You could also introduce decoys - maybe you lose points if you accidentally click a different gem instead of a cupcake!
+You might have noticed that there are different cupcakes that display - you could randomise which cupcake shows each time, and give each cupcake a different number of points. You could also introduce decoys - maybe you lose points if you accidentally click a different gem instead of a cupcake!
 
 #### Keep Experimenting!
 
 The possibilities are endless. Whether you add new features or simply polish the look and feel of your game, every tweak is a chance to learn something new.
 
 Check out some of our alumni and their versions!
-Play Jess's game [Kitty Pat](https://codepen.io/Jet760/pen/dyxwdZj)
+-   Play Jess's game [Kitty Pat](https://codepen.io/Jet760/pen/dyxwdZj)
 
-Play Christin's version and [avoid getting smashed](https://lnkd.in/gy8427x3)
+-   Play Christin's version and [avoid getting smashed](https://lnkd.in/gy8427x3)
 
-Or try [Gina's from DDD](https://lnkd.in/gZxBFWZ5)
+-   Or try [Gina's from DDD](https://lnkd.in/gZxBFWZ5)
 
 If you've enjoyed learning with She Codes and you're hungry for more tutorials, check out [our growing list of free tutorials here](https://shecodes.com.au/tutorials).
 
