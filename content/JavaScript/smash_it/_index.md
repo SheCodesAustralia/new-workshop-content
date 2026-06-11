@@ -8,7 +8,7 @@ chapter: false
 
 Now that our cupcakes are merrily popping up and down like little party crashers, let's write a function to 'smash' them!
 
-To do this, we're going to create another function called `smash` to run whenever you click on a cupcake. When you do, the cupcake will disappear as if it's been perfectly smashed! To make this happen, we remove the `up` class from the hole the cupcake is in so that the smashed cupcake pops down again.
+To do this, we're going to create another function called `smash()` to run whenever you click on a cupcake. When you do, the cupcake will disappear as if it's been perfectly smashed! To make this happen, we remove the `up` class from the hole the cupcake is in so that the smashed cupcake pops down again.
 
 Add the following function to the bottom of your code:
 
@@ -19,7 +19,7 @@ function smash(cupcake) {
 }
 ```
 
-When we created the HTML code in the template, we actually already instructed the button to run this function when it is clicked (feel free to peek at the HTML code and see this for yourself). Press **Start** and start smashing cupcakes! Whenever you click a cupcake it will disappear again, and a message will appear in the console.
+When we created the HTML code in the template, we actually already instructed the button to run this function when it is clicked (feel free to peek at the HTML code and see this for yourself). Press **Start** and start smashing cupcakes! Whenever you click a cupcake, it will disappear again, and a message will appear in the console.
 
 
 > You may have noticed that we're using this thing called a `parentNode`. Up until now, we have been referencing the hole elements in the HTML, but now we want to reference the cupcake itself (which is inside the 'hole' element). 

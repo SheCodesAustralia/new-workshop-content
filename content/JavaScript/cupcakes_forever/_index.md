@@ -6,7 +6,7 @@ chapter: false
 
 ## Popping Up Cupcakes
 
-Next we want to create a function to pop our cupcakes up out of the holes. There's CSS styling already set up for most of this so the cupcakes will appear all shiny, so we just need to add a class to one of our holes to make the cupcakes appear. This will take the first hole from the list we saved earlier, and add the class of `up` to it (which will then do some CSS magic). Add the following to the bottom of your JavaScript code:
+Next we want to create a function to pop our cupcakes up out of the holes. There's CSS styling already set up for most of this to make the cupcakes appear all shiny, so we just need to add a class to one of our holes to trigger the effect. This will take the first hole from the list we saved earlier, and add the class of `up` to it (which will then do some CSS magic). Add the following to the bottom of your JavaScript code:
 
 ```js {title="js"}
 function popUp() {
@@ -43,7 +43,7 @@ function startGame() {
 ```
 {{% /notice %}}
 
-Now try clicking the **Start** button and see what happens! A cupcake should have appeared form the first hole.
+Now try clicking the **Start** button and see what happens! A cupcake should have appeared from the first hole.
 
 ## Check your code!
 

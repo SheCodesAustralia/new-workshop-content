@@ -50,14 +50,14 @@ function popUp() {
 	hole.classList.add('up');
 	setTimeout(function() {
 		hole.classList.remove('up');
- }, time)
+ }, time);
 }
 ```
 {{% /notice %}}
 
 > **Introducing a Delay:** 
 > 
-> By using the `setTimeout` function we can tell JavaScript, "Hey, wait a little while - say, 500 milliseconds (that's half a second!) - and then hide the cupcake. This delay is stored in a variable called `time`.
+> By using the `setTimeout` function we can tell JavaScript, "Hey, wait a little while - say, 500 milliseconds (that's half a second!) - and then hide the cupcake." This delay is stored in a variable called `time`.
 
 
 You should now be able to see the cupcake appearing and disappearing when you start the game.

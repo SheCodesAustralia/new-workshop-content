@@ -10,11 +10,11 @@ Now that you're smashing cupcakes like a pro, it's time to keep track of your ep
 
 {{% notice style="tip" title="Tip" %}}
 
-Remember, right at the start we set the variable `scoreBoard`.
+Remember, right at the start we set the variable `scoreBoard` to target the score counter element on the page.
 
 {{% /notice %}}
 
-Now we're going to create another variable (this time called `score`) that starts at zero, and increases by one each time a cupcake is successfully smashed. This is your personal cupcake smash counter!
+Now, we're going to create another variable (this time called `score`) that starts at zero and increases by one each time a cupcake is successfully smashed. This is your personal cupcake smash counter!
 
 {{% notice style="warning" title="Before - Replace this code" %}}
 ```js
@@ -43,7 +43,7 @@ function smash(cupcake) {
 
 > Can you see the `smash` function? In this function, every time a cupcake is hit, we add 1 to the score.
 
-We're also going to tell our `scoreBoard` variable to show `score` whenever it is increased. To update `scoreBoard` we will use the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property.
+We're also going to tell our `scoreBoard` variable to show `score` whenever it is increased. To update `scoreBoard`, we will use the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) property.
 
 {{% notice style="warning" title="Before - Replace this code" %}}
 ```js
@@ -69,7 +69,7 @@ function smash(cupcake) {
 ```
 {{% /notice %}}
 
-**Start** the game and watch your score increase everytime you smash a cupcake!
+**Start** the game and watch your score increase every time you smash a cupcake!
 
 > **Resetting the score:** Each time we restart the game, we also want to reset the score back to zero, so we can start again from scratch.
 

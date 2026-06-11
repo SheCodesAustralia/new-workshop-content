@@ -44,7 +44,7 @@ function popUp() {
 		if(timeUp == false) {
 				popUp();
 		}
-	}, time)
+	}, time);
 }
 ```
 {{% /notice %}}
@@ -63,7 +63,7 @@ function popUp() {
 		if(timeUp == false) {
 				popUp();
 		}
-	}, time)
+	}, time);
 }
 ```
 {{% /notice %}}

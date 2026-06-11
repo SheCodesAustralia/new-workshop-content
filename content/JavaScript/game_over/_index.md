@@ -6,7 +6,7 @@ chapter: false
 
 ## Ending the Game
 
-Before we go too much further with our cupcakes, let's edit the `endGame` function we created earlier so that instead of publishing a message to the console, it changes the value stored in our `timeUp` variable to `true.`
+Before we go too much further with our cupcakes, let's edit the `endGame()` function we created earlier so that instead of printing a message to the console, it changes the value stored in our `timeUp` variable to `true.`
 
 {{% notice style="warning" title="Before - Replace this code" %}}
 ```js
