@@ -36,7 +36,7 @@ If the command returns `Python 3.Y.Z` congratulations you have Python installed!
 {{% tab title="_**MacOS**_" %}}
 
 {{% notice note %}}
-Before you install Python on OS X, you should ensure your Mac settings allow
+Before you install Python on macOS, you should ensure your Mac settings allow
  installing packages that aren't from the App Store.  
  Go to System Preferences (it's in the Applications folder), click
  "Security & Privacy," and then the "General" tab.  

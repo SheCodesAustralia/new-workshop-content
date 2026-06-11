@@ -4,10 +4,10 @@ weight: 8
 chapter: false
 ---
 
-In this section you are going to develop a way of having multiple space cabbages \(food\) moving around the screen for your turtle to chomp. You are going to do this using the python functions of Lists and Loops
+In this section, you are going to develop a way of having multiple space cabbages \(food\) moving around the screen for your turtle to chomp. You are going to do this using Python Lists and Loops.
 
->**Step 1.**  First we create the maximum number of cabbages and an empty list by
- editing the `# Create food` section with the following code at the top:
+>**Step 1.**  First, we create the maximum number of cabbages and an empty list by
+ editing the `# Create food` section with the following code:
 
 ```python {title="python"}
 # Create food
@@ -15,7 +15,7 @@ maxFoods = 6
 foods = []
 ```
 
->**Step 2.**  Next you create a for loop using maxFoods as the range updating the code
+>**Step 2.**  Next, you create a for loop using maxFoods as the range updating the code:
 
 From this:
 
@@ -41,9 +41,9 @@ for count in range(maxFoods):
     foods.append(new_food)
 ```
 
-So we use the append function to add our maximum number of cabbages held in the list, so foods.\[1\] is a turtle object, foods.\[2\] is a turtle object etc. etc.
+We use the `append()` method to add our maximum number of cabbages to the list. This means foods.\[0\] is a turtle object, foods.\[1\] is a turtle object etc. etc.
 
->**Step 3.**  Now you need to do the same thing for moving the turtle within the \# Move Food around section by changing
+>**Step 3.**  Now, you need to do the same thing for moving the turtle within the \# Move Food around section by changing
 
 this:
 
@@ -60,7 +60,7 @@ to:
         food.forward(3)
 ```
 
-And then indent and change
+And then indent the boundary checking code so it sits inside your new #Move Food around loop, changing
 
 this:
 
@@ -77,17 +77,21 @@ this:
 to:
 
 ```python {title="python"}
-        # Boundary Food Checking x coordinate
-        if food.xcor() > 290 or food.xcor() <- 290:
-            food.right(180)
+    #Move Food around
+    for food in foods:
+        food.forward(3)
 
-        # Boundary Food Checking y coordinate
-        if food.ycor() > 290 or food.ycor() <- 290:
-            food.right(180)
+        #Boundary Food Checking x coordinate
+        if food.xcor() > 290 or food.xcor() < -290:
+           food.right(180)
+
+        #Boundary Food Checking y coordinate
+        if food.ycor() > 290 or food.ycor() < -290:
+           food.right(180)
 ```
 
->**Step 4.**  Now let’s move \(cut and paste\) your food collision checking code
- within move goal loop. Make sure you indent your code now looks like:
+>**Step 4.**  Now let’s move \(copy and paste\) your food collision checking code
+ inside the food movement loop. Make sure you indent it so that your code looks like:
 
 ```python {title="python"}
     #Move food around
@@ -110,9 +114,9 @@ to:
 
 >**Step 5.**  Save the game as kbgame7 and run your module.
 
-You now have multiple cabbages moving around your screen however the screen can start to look a bit jumpy, to fix this we can add the tracer function to the program. This tells the computer not to refresh the screen each time and speeds up the animation.
+You now have multiple cabbages moving around your screen. However, the screen can start to look a bit jumpy. To fix this, we can add the `tracer` method to the program. This tells the computer not to refresh the screen each time and speeds up the animation.
 
->**Step 6.**  Add the tracer function by typing the following at the end of the \#Set up screen area:
+>**Step 6.**  Add the tracer method by typing the following at the end of the \#Set up screen area:
 
 ```python {title="python"}
 wn.tracer(3)
@@ -156,7 +160,7 @@ player.penup()
 player.speed(0)
 
 
-#create food
+#Create food
 maxFoods = 6
 foods = []
 
@@ -172,7 +176,7 @@ for count in range(maxFoods):
 #Set speed variable
 speed = 1
 
-#Define  functions
+#Define functions
 
 def turn_left():
     player.left(30)
@@ -201,11 +205,11 @@ turtle.onkey(increase_speed, "Up")
 while True:
     player.forward(speed)
 
-    #Boundary Checking x cordinate
-    if player.xcor() > 290 or player.xcor() <-290:
+    #Boundary Checking x coordinate
+    if player.xcor() > 290 or player.xcor() < -290:
         player.right(180)
     #Boundary Checking y coordinate
-    if player.ycor() > 290 or player.ycor() <-290:
+    if player.ycor() > 290 or player.ycor() < -290:
         player.right(180)
 
     #Move Food around
@@ -213,11 +217,11 @@ while True:
         food.forward(3)
 
         #Boundary Food Checking x coordinate
-        if food.xcor() > 290 or food.xcor() <-290:
+        if food.xcor() > 290 or food.xcor() < -290:
            food.right(180)
 
         #Boundary Food Checking y coordinate
-        if food.ycor() > 290 or food.ycor() <-290:
+        if food.ycor() > 290 or food.ycor() < -290:
            food.right(180)
 
         #Collision checking
