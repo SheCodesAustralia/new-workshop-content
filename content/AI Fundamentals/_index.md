@@ -1,6 +1,7 @@
 ---
 title: "AI"
 weight: 5
+pre: "<i class='fa-solid fa-robot'> </i>&nbsp; "
 ---
 
 Love it or hate it, the world is moving towards AI - and rapdily.

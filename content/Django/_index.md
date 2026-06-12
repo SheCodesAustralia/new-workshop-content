@@ -1,7 +1,7 @@
 ---
 title: "Django"
 weight: 4
-pre: "<i class='fab fa-python'></i>&nbsp; "
+pre: "<i class='fa-solid fa-bread-slice'></i>&nbsp; "
 ---
 
 Django is a powerful web framework built with Python that helps you create dynamic websites quickly and efficiently. Instead of manually coding every page, Django lets you use templates to automatically generate pages with fresh data—such as blog posts or user profiles.
