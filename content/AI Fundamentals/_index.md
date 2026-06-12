@@ -1,29 +1,14 @@
 ---
-title: "Django"
-weight: 4
-pre: "<i class='fab fa-python'></i>&nbsp; "
+title: "AI"
+weight: 5
 ---
 
-Django is a powerful web framework built with Python that helps you create dynamic websites quickly and efficiently. Instead of manually coding every page, Django lets you use templates to automatically generate pages with fresh data—such as blog posts or user profiles.
+Love it or hate it, the world is moving towards AI - and rapdily.
 
-Django also simplifies connecting your site to a database, making it easy to store and manage information like user comments or product listings. Plus, Django comes with built-in features like user authentication and security, so you can focus on building your site without reinventing the wheel.
+According to McKinsey - 62% of survey respondants say their company is experimenting with AI agents. There is clearly high curiosity and experimentation. The same study found that nearly two-thirds of respondents say their organizations have not yet begun scaling AI across the enterprise.
 
-Some places you might see Django in the wild include Instagram, Pinterest and National Geographic.
+According to a study by Lean In, women were 22% less likely than men to be regular AI users at work. 
 
-### What will you learn during the tutorial?
+We don't know where the world is headed - but we know knowledge is power.
 
-By the end of this tutorial, you'll have built a fully functional Django application that showcases a Bakery Finder app for discovering the best local bakeries and their delicious offerings all at your fingertips.
 
-You’ll learn how to structure your project with Django’s models, views, and templates, and you'll add the finishing touches with custom styling to make your site visually appealing. 
-
-{{% notice info %}}
-
-What is the difference between building a website in Django vs HTML/CSS?
-
-**HTML/CSS websites are static:** You need to code each page by hand, which is fine for simple, unchanging content but not for interactive sites.
-
-**Django:** If you want a website that updates itself and interacts with users, Django is an excellent, beginner-friendly choice.
-
-{{% /notice %}}
-
-_This tutorial was made with <3 by [Kate Kirwin](https://github.com/katekirwin), [Behnaz Shojaei](https://github.com/BehnazShojaei), [Cristiane Tanaka](https://github.com/cristianetanaka), [Matt Harley](https://github.com/mattharley), and [Marc Armstrong](https://github.com/neronymous)._
