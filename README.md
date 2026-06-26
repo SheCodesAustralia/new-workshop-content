@@ -109,21 +109,21 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/python/getting_started/_index.md](content/python/getting_started/_index.md)
 
-- [ ] **Install** — "We need Python before we can start... start by installing Python" (intro).
-- [ ] **Invoke** — macOS/Linux version check: `python3 --version`.
-- [ ] **Invoke** — Windows version check: `py --version`.
-- [ ] **Install** — macOS: change Security & Privacy settings before installing.
-- [ ] **Install** — macOS: download the installer from https://www.python.org/downloads/ and run the `.pkg`.
-- [ ] **Invoke** — Linux version check: `python3 --version`.
-- [ ] **Install** — Linux (Debian/Ubuntu): `sudo apt-get install python3`.
-- [ ] **Install** — Linux (Fedora up to 21): `sudo yum install python3`.
-- [ ] **Install** — Linux (Fedora 22+): `sudo dnf install python3`.
-- [ ] **Install** — Linux (openSUSE): `sudo zypper install python3`.
-- [ ] **Invoke** — Verify install: `python3 --version`.
-- [ ] **Install** — Windows: download from https://www.python.org/downloads/windows/ and run the executable installer (tick "Add Python 3.x to PATH").
-- [ ] **Install** — Windows: install Python from the Microsoft Store.
-- [ ] **Screenshot** — Windows Run dialog (`cmd`): [windows-plus-r.png](content/python/getting_started/python_installation/images/windows-plus-r.png).
-- [ ] **Screenshot** — Windows "Add Python to PATH" installer screen: [add_python_to_windows_path.png](content/python/getting_started/python_installation/images/add_python_to_windows_path.png).
+- [x] **Install** — "We need Python before we can start... start by installing Python" (intro).
+- [x] **Invoke** — macOS/Linux version check: `python3 --version`.
+- [x] **Invoke** — Windows version check: `py --version`.
+- [x] **Install** — macOS: change Security & Privacy settings before installing.
+- [x] **Install** — macOS: download the installer from https://www.python.org/downloads/ and run the `.pkg`.
+- [x] **Invoke** — Linux version check: `python3 --version`.
+- [x] **Install** — Linux (Debian/Ubuntu): `sudo apt-get install python3`.
+- [x] **Install** — Linux (Fedora up to 21): `sudo yum install python3`.
+- [x] **Install** — Linux (Fedora 22+): `sudo dnf install python3`.
+- [x] **Install** — Linux (openSUSE): `sudo zypper install python3`.
+- [x] **Invoke** — Verify install: `python3 --version`.
+- [x] **Install** — Windows: download from https://www.python.org/downloads/windows/ and run the executable installer (tick "Add Python 3.x to PATH").
+- [x] **Install** — Windows: install Python from the Microsoft Store.
+- [x] **Screenshot** — Windows Run dialog (`cmd`): [windows-plus-r.png](content/python/getting_started/python_installation/images/windows-plus-r.png).
+- [x] **Screenshot** — Windows "Add Python to PATH" installer screen: [add_python_to_windows_path.png](content/python/getting_started/python_installation/images/add_python_to_windows_path.png).
 
 ### [content/python/getting_started/how_to_python/_index.md](content/python/getting_started/how_to_python/_index.md)
 
@@ -178,3 +178,18 @@ For questions about the workshop content or technical issues, please create an i
 
 - The `content/python/` tutorial does not create or use a virtual environment.
 - [python-installation-options.png](content/python/getting_started/python_installation/images/python-installation-options.png) is a Python installer options screenshot that is not referenced by any markdown file (possibly orphaned — worth confirming).
+
+---
+
+# Changelog
+
+> [!CAUTION]  
+> Remember to include the following in the PR and then delete from this README.
+
+## [Getting Started](./content/python/getting_started/_index.md)
+
+- Removed a section in Mac instructions on checking whether Python is already installed. Irrelevant because we'll be using UV.
+- Removed a section in Mac instructions that told the user to make sure their Mac was configured to allow non-Apple Store installs. Unnecessary because UV is amazing.
+- Modified Mac install instructions to use UV
+- Cut down the various flavours of Linux install instructions to a single blanket UV installation
+- Modified Windows install instructions to use UV
