@@ -95,92 +95,6 @@ For questions about the workshop content or technical issues, please create an i
 
 ---
 
-# TODO
-
-> [!CAUTION]  
-> Remember to delete this section once the changes are complete.
-
-**Legend:** 
-- **Install** = Python install step
-- **Invoke** = Python run from the terminal
-- **Venv** = virtual environment creation 
-- **pip** / **django-admin** = related terminal commands
-- **Screenshot** = image that may need updating.
-
-### [content/python/getting_started/_index.md](content/python/getting_started/_index.md)
-
-- [x] **Install** — "We need Python before we can start... start by installing Python" (intro).
-- [x] **Invoke** — macOS/Linux version check: `python3 --version`.
-- [x] **Invoke** — Windows version check: `py --version`.
-- [x] **Install** — macOS: change Security & Privacy settings before installing.
-- [x] **Install** — macOS: download the installer from https://www.python.org/downloads/ and run the `.pkg`.
-- [x] **Invoke** — Linux version check: `python3 --version`.
-- [x] **Install** — Linux (Debian/Ubuntu): `sudo apt-get install python3`.
-- [x] **Install** — Linux (Fedora up to 21): `sudo yum install python3`.
-- [x] **Install** — Linux (Fedora 22+): `sudo dnf install python3`.
-- [x] **Install** — Linux (openSUSE): `sudo zypper install python3`.
-- [x] **Invoke** — Verify install: `python3 --version`.
-- [x] **Install** — Windows: download from https://www.python.org/downloads/windows/ and run the executable installer (tick "Add Python 3.x to PATH").
-- [x] **Install** — Windows: install Python from the Microsoft Store.
-- [x] **Screenshot** — Windows Run dialog (`cmd`): [windows-plus-r.png](content/python/getting_started/python_installation/images/windows-plus-r.png).
-- [x] **Screenshot** — Windows "Add Python to PATH" installer screen: [add_python_to_windows_path.png](content/python/getting_started/python_installation/images/add_python_to_windows_path.png).
-
-### [content/python/getting_started/how_to_python/_index.md](content/python/getting_started/how_to_python/_index.md)
-
-- [x] **Invoke** — Open the Python REPL: type `python` (Windows) or `python3` (Mac/Linux).
-- [x] **Invoke** — Launching the Python console: `python3`.
-- [x] **Invoke** — Run a script: `python3 python_intro.py`.
-- [x] **Invoke** — Windows run a script: `python python_intro.py`.
-- [x] **Invoke** — Re-running `python3 python_intro.py` (repeated throughout the exercises).
-
-### [content/Django/getting_started/_index.md](content/Django/getting_started/_index.md)
-
-- [x] **Install** — "Install Python" section intro.
-- [x] **Install** — macOS: download the Python 3.x installer from python.org and run it.
-- [x] **Install** — Windows: download Python from python.org (tick "Add Python 3 to PATH").
-- [x] **Invoke** — Linux version check: `python3 --version`.
-- [x] **Install** — Linux: `sudo apt install python3` / `sudo dnf install python3` / `sudo zypper install python3`.
-- [x] **Venv** — "Set up virtual environment and install Django" section intro.
-- [x] **Venv** — macOS/Linux: `python3 -m venv myvenv`.
-- [x] **Venv** — Windows: `python -m venv myvenv`.
-- [x] **pip** — `pip install --upgrade pip`.
-- [x] **pip** — `pip install -r requirements.txt`.
-
-### [content/Django/your_first_django_project/_index.md](content/Django/your_first_django_project/_index.md)
-
-- [x] **django-admin** — macOS/Linux: `django-admin startproject bakery_project .`.
-- [x] **django-admin** — Windows: `django-admin.exe startproject bakery_project .`.
-- [x] **Invoke** — `python manage.py runserver`.
-- [x] **Invoke** — Windows `UnicodeDecodeError` fix: `python manage.py runserver 0:8000`.
-
-### [content/Django/lets_get_appy/_index.md](content/Django/lets_get_appy/_index.md)
-
-- [x] **Invoke** — `python manage.py startapp bakeries`.
-- [x] **Invoke** — Windows: `python manage.py startapp bakeries`.
-- [x] **Invoke** — `python manage.py runserver`.
-- [x] **Invoke** — `python3 manage.py runserver`.
-
-### [content/Django/shes_a_model/_index.md](content/Django/shes_a_model/_index.md)
-
-- [x] **Invoke** — `python manage.py migrate`.
-- [x] **Invoke** — `python manage.py makemigrations bakeries`.
-- [x] **Invoke** — `python manage.py migrate bakeries`.
-
-### [content/Django/django_admin/_index.md](content/Django/django_admin/_index.md)
-
-- [x] **Invoke** — `python manage.py runserver`.
-- [x] **Invoke** — `python3 manage.py runserver`.
-- [x] **Invoke** — `python manage.py createsuperuser`.
-- [x] **Invoke** — `python3 manage.py createsuperuser`.
-- [x] **Invoke** — `python manage.py createsuperuser`.
-
-## Notes
-
-- The `content/python/` tutorial does not create or use a virtual environment.
-- [python-installation-options.png](content/python/getting_started/python_installation/images/python-installation-options.png) is a Python installer options screenshot that is not referenced by any markdown file (possibly orphaned — worth confirming).
-
----
-
 # Changelog
 
 > [!CAUTION]  
@@ -236,3 +150,6 @@ For questions about the workshop content or technical issues, please create an i
 - Ditto for `createsuperuser`
 - Removed leftover language referring to blog posts - this is a bakery app now
 - Bakery Item table had a "Description" column but the model doesn't have that attribute. Replaced it with a "price" column
+
+## Misc
+- Various slight grammar/bugfixes for Python content.
