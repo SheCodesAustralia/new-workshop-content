@@ -8,15 +8,10 @@ chapter: false
 
 ### Creating an application
 
-To keep everything tidy, we will create a separate application inside our project, this will help us to have some nice solid foundations as the project expands. To create an application we need to run the following command in the console (from `bakery_site` directory where `manage.py` file is):
+To keep everything tidy, we will create a separate "application" inside our project, this will help us to have some nice solid foundations as the project expands. To create an application we need to run the following command in the console (from `bakery_site` directory where `manage.py` file is):
 
-macOS or Linux:
 ```sh {title="terminal"}
-(myvenv) bakery_site% python manage.py startapp bakeries
-```
-Windows:
-```sh {title="terminal"}
-(myvenv) C:\Users\Name\bakery_site> python manage.py startapp bakeries
+uv run manage.py startapp bakeries
 ```
 
 You will notice that a new `bakeries` directory is created and it contains a number of files now. The directories and files in our project should look like this:
@@ -40,9 +35,10 @@ bakery_site
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── myvenv
+├── .venv
 │   └── ...
-└── requirements.txt
+├── pyproject.toml
+└── uv.lock
 
 ```
 {{% notice style="tip" title="Time to celebrate" %}}
@@ -55,7 +51,7 @@ Congratulations - you have an app now!
 
 Next, we want to set it up so that when someone visits the homepage (http://127.0.0.1:8000/), Django knows to run a specific function called a *view*. 
 
-The *view* is the brain behind what your user sees on the screen. It receives the request, adds any extra logic we've added (like filtering, sorting, etc.) and pass it to a `template`. We'll create a *template* a bit later on.
+The *view* is the brain behind what your user sees on the screen. It receives the request, adds any extra logic we've added (like filtering, sorting, etc.) and passes it to a `template`. We'll create a *template* a bit later on.
 
 We will add our *views* to the `bakeries/views.py` file.
 
@@ -128,7 +124,6 @@ Time to create our first URL! We want 'http://127.0.0.1:8000/' to be the home pa
 In your `bakery_project/urls.py` file please add the following lines under `from django.contrib import admin` :
 
 ```python {title="django"}
-
 from django.urls import path, include
 from bakeries.views import index
 
@@ -139,32 +134,23 @@ urlpatterns = [
 ]
 ```
 
-The `include()` function lets you include other URL configurations from other apps.
+The `include()` function lets you include other URL configurations from other apps. We aren't using it yet, but it's good to have.
 
 Django will run the `index` view whenever someone goes to the homepage URL (which is just an empty string after the domain name, like `http://127.0.0.1:8000/`).
 
 {{% notice style="warning" %}}
 
-Alright, save that file. VS Code is super helpful and will have a dot next to your file name if you've got unsaved changes. Its really easy to forget to save, so if you're running code and its not working as expected, double check you've saved the files.
+Alright, save that file. VS Code is super helpful and will have a dot next to your file name if you've got unsaved changes. It's really easy to forget to save, so if you're running code and it's not working as expected, double check you've saved the files.
 
 {{% /notice %}}
 
 ## Hello World
 
-Lets check to see if our website is saying hello to us. As a reminder, you need to be in the directory that contains the `manage.py` file (the `bakery_site` directory). In the console, we can start the web server by running `python manage.py runserver`:
+Let's check to see if our website is saying hello to us. As a reminder, you need to be in the directory that contains the `manage.py` file (the `bakery_site` directory). In the console, we can start the web server like so:
 
-{{< tabs groupid="a">}}
-{{% tab title="_**should work**_" %}}
 ```sh {title="terminal"}
-(myvenv) bakery_site% python manage.py runserver
+uv run manage.py runserver
 ```
-{{% /tab %}}
-{{% tab title="_**if it doesn't work**_" %}}
-```sh {title="terminal"}
-(myvenv) bakery_site% python3 manage.py runserver
-```
-{{% /tab %}}
-{{< /tabs >}}
 
 {{% notice note %}}
 

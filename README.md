@@ -155,10 +155,10 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/Django/lets_get_appy/_index.md](content/Django/lets_get_appy/_index.md)
 
-- [ ] **Invoke** — `python manage.py startapp bakeries`.
-- [ ] **Invoke** — Windows: `python manage.py startapp bakeries`.
-- [ ] **Invoke** — `python manage.py runserver`.
-- [ ] **Invoke** — `python3 manage.py runserver`.
+- [x] **Invoke** — `python manage.py startapp bakeries`.
+- [x] **Invoke** — Windows: `python manage.py startapp bakeries`.
+- [x] **Invoke** — `python manage.py runserver`.
+- [x] **Invoke** — `python3 manage.py runserver`.
 
 ### [content/Django/shes_a_model/_index.md](content/Django/shes_a_model/_index.md)
 
@@ -219,3 +219,9 @@ For questions about the workshop content or technical issues, please create an i
 - Create project step now uses `uv run`
 - Updated project structure diagram and added explanations of where things came from
 - `runserver` instructions now use `uv run`
+
+## [Let's Get Appy](content/Django/lets_get_appy/_index.md)
+- create app step now uses `uv run`
+- updated file tree
+- runserver now uses `uv run`
+- added a sentence to justify why we import `include` but don't yet use it.
