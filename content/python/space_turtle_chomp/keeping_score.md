@@ -6,14 +6,18 @@ chapter: false
 
 To make this more like a game, you can add a score for each time your turtle chomps on a cabbage. To do this, you will create a new score variable.
 
->**Step 1.**  Move to after the \#Create player turtle section of your code and type the following:
+### Step 1.
+
+Move to after the \#Create player turtle section of your code and type the following:
 
 ```python {title="python"}
 # Create variable score
 score = 0
 ```
 
->**Step 2.**  Move to the space after the #Create player turtle section of your code, and type the following:
+### Step 2.
+
+Move to the space after the #Create player turtle section of your code, and type the following:
 
 ```python {title="python"}
          score +=1
@@ -24,7 +28,9 @@ This will calculate a score but you can’t see it on the screen.
 
 {{% /notice %}}
 
->**Step 3.**  Now, we will add the score to the screen by reusing the `mypen` turtle to write it. You can do this by typing the following under the score += 1 text in the #Collision checking section:
+### Step 3.
+
+Now, we will add the score to the screen by reusing the `mypen` turtle to write it. You can do this by typing the following under the score += 1 text in the #Collision checking section:
 
 ```python {title="python"}
     # Draw the score on the screen
@@ -37,17 +43,23 @@ This will calculate a score but you can’t see it on the screen.
 
 So, you have created a string that displays the score in the top left-hand corner of your screen.
 
->**Step 4.**  Save your game as kbgame9 and run your module.
+### Step 4.
+
+Save your game as kbgame9 and run your module.
 
 What you should now see is that your score is in the top left-hand corner of the screen, but the numbers (1, 2, 3, 4, etc.) are writing over each other. You can fix this by deleting the previous score before writing the new score.
 
->**Step 5.**  Add the undo() method to the top of the #Draw the score on the screen section:
+### Step 5.
+
+Add the undo() method to the top of the #Draw the score on the screen section:
 
 ```python {title="python"}
     mypen.undo()
 ```
 
->**Step 6.**  Save and Run your module.
+### Step 6.
+
+Save and Run your module.
 
 Your code should look like this: 
 

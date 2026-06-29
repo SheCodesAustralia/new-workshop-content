@@ -6,9 +6,13 @@ chapter: false
 
 Currently, with our turtle game, you can move your player turtle off the screen, which we don’t want to happen, in this exercise, we are going to draw a border and then set boundaries so your turtle can not move off the screen.
 
->**Step 1.** Use Save As to save your module as `kbgame3`
+### Step 1.
 
->**Step 2.** Move to the top of your code just under the \#Set up Screen section and the `wn.bgcolor('Navy')` line. Create a new turtle element called `#Draw border` by typing:
+Use Save As to save your module as `kbgame3`
+
+### Step 2.
+
+Move to the top of your code just under the \#Set up Screen section and the `wn.bgcolor('Navy')` line. Create a new turtle element called `#Draw border` by typing:
 
 ```python {title="python"}
 wn.bgcolor('Navy') 
@@ -34,7 +38,9 @@ mypen.hideturtle()
 
 `pendown` gets your mypen turtle ready to draw, and the `for side in range (4):` tells your `mypen` turtle to draw four sides using a simple loop: draw forward by 600 points, then turn left, and repeat four times.
 
->**Step 3.** Save and Run your module.  
+### Step 3.
+
+Save and Run your module.
 
 Notice how a turtle 'draws' the borders when the module loads? If you would like to get straight to the turtle-y action, try setting `mypen.speed(0)` after setting `mypen.color('...')`
 
@@ -46,7 +52,9 @@ While there is now a border your player turtle can still go off screen, this is 
 
 Now we have to do something called boundary checking, what this will do is check the location of our turtleand if the turtle's X coordinate is lower than -290 or greater than 290, we have hit either the left or right border (X-axis). Similarly, if the Y coordinate is greater than 290 or lower than -290, we have hit either the top or bottom border (Y-axis). We then simply choose what we want to happen when this occurs - for this game we are going to bounce off the border wall at 180 degrees.
 
->**Step 4.** As we need this to happen every time during the game we need the code to be written within the while True loop under the line `player.forward\(speed\)`:
+### Step 4.
+
+As we need this to happen every time during the game we need the code to be written within the while True loop under the line `player.forward\(speed\)`:
 
 ```python {title="python"}
 while True:
@@ -67,7 +75,9 @@ while True:
 
 {{% /notice %}}
 
->**Step 5.** Save and then Run your module.
+### Step 5.
+
+Save and then Run your module.
 
 {{% notice style="info" title="Challenge!" icon="lightbulb" %}}
 

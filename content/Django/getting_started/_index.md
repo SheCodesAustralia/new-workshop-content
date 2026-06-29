@@ -11,56 +11,70 @@ In this tutorial you will be building a Bakery app. In order to do that, as you 
 {{% notice info %}}
 **Brief intro to the command line**
 
-Many of the steps below reference the `console`, `terminal`, `command window`, or `command line` -- these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like:
+Many of the steps below reference the `console`, `terminal`, `command window`, or `command line` -- these all mean the same thing: a window on your computer where you can enter commands. For now, the main thing you need to know is how to open a command window and what it looks like. You'll get your first taste of this in the instructions below!
 
 {{% /notice %}}
 
-#### Opening the command line
+#### Install Python (via UV)
 
-{{< tabs groupid="a" >}}
+Django is written in Python. We need Python to do anything in Django. Let's start by installing it! To handle that we will use a tool called `UV`. [Check out the documentation here if you are curious.](https://docs.astral.sh/uv/)
+
+UV simplifies the process of installing and running Python, and can help us organise our various Python projects too.
+
+{{< tabs groupid="a">}}
 {{% tab title="_**MacOS**_" %}}
-Go to **Launchpad → Other → Terminal**.
-{{% /tab %}}
-{{% tab title="_**Windows**_" %}}
-  - Search **Command Prompt** in the Start menu.
-  - Open **Windows System → Command Prompt**.
-  - Use `Win + R`, type `cmd`, and press Enter.
+
+Open the Mac Terminal by:
+1. Pressing `Command` (⌘) + `Spacebar` to open Spotlight Search
+2. Typing "Terminal" in the search field
+3. Pressing `Return` (Enter) to launch the Terminal
+
+Next, copy-paste the following command into your terminal window, and then hit `Return`:
+
+<!-- {% filename %}command-line{% endfilename %} -->
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Congrats, you now have `UV` installed.
+
 {{% /tab %}}
 {{% tab title="_**Linux**_" %}}
-Usually found under **Applications → Accessories → Terminal**.
+Open the bash terminal, and run the following command:
+
+<!-- {% filename %}command-line{% endfilename %} -->
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Congrats, you now have `UV` installed.
+
+{{% /tab %}}
+  
+{{% tab title="_**Windows**_" %}}
+
+Open PowerShell by:
+1. Pressing the Windows key
+2. Typing "powershell"
+3. Clicking `Windows PowerShell`
+
+Next, copy-paste the following command into your PowerShell window, and then hit `Return`:
+
+<!-- {% filename %}command-line{% endfilename %} -->
+```sh
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Congrats, you now have `UV` installed.
+
 {{% /tab %}}
 {{< /tabs >}}
 
-#### Install Python
+----
 
-Django is written in Python. We need Python to do anything in Django. Let's start by installing it! We want you to install the latest version of Python 3, so if you have any earlier version, you will need to upgrade it. If you already have version 3.10 or higher you should be fine.
+Before continuing with this tutorial you should close and re-open your terminal/PowerShell in order to make sure that your newly installed UV is active.
 
-{{< tabs groupid="a" >}}
-{{% tab title="_**MacOS**_" %}}
-1. Go to [python.org](https://www.python.org/downloads/).
-2. Download the latest **Python 3.x** installer.
-3. Run the installer and follow the instructions.
-{{% /tab %}}
-{{% tab title="_**Windows**_" %}}
-1. Download **Python** from [python.org](https://www.python.org/downloads/windows/).
-2. Run the installer and ensure you **tick "Add Python 3 to PATH"** before installing.
-{{% /tab %}}
-{{% tab title="_**Linux**_" %}}
-Check if Python is installed:
-
-```sh {title="terminal"}
-python3 --version
-```
-
-If not, install it based on your Linux distribution. What's a Linux distribution? Distributions are packaged collections of software built on top of the Linux kernel, offering a complete operating system experience. We've pulled out a couple to get you started, if yours isn't there - Google is your friend, or ask a mentor for help.
-
-```sh {title="terminal"}
-sudo apt install python3   # Debian/Ubuntu
-sudo dnf install python3   # Fedora
-sudo zypper install python3  # openSUSE
-```
-{{% /tab %}}
-{{< /tabs >}}
+If you have any doubts, or if something went wrong and you have no idea what to do next, please ask a mentor!
 
 ### Install a Code Editor
 
@@ -80,81 +94,83 @@ We'll see all this in action later. Soon, you'll come to think of your trusty ol
 
 ### Set up virtual environment and install Django
 
-Before we install Django we will get you to install an extremely useful tool to help keep your coding environment tidy on your computer. It's possible to skip this step, but it's highly recommended to follow it. Starting with the best possible setup will save you a lot of trouble in the future!
+> [!primary] NOTE 
+> The following instructions should be executed in the terminal!
 
-So, let's create a virtual environment (also called a virtualenv). Virtualenv will isolate your Python/Django setup on a per-project basis. This means that any changes you make to one website won't affect any others you're also developing. Neat, right?
+Before we install Django we will get you to set up an extremely useful tool to help keep your coding environment tidy on your computer: a virtual environment. You might sometimes hear this referred to as a "venv".
 
-All you need to do is find a directory in which you want to create the virtualenv; your home directory, for example. On Windows, it might look like `C:\Users\Name\` (where Name is the name of your login).
+Your virtual environment will isolate your Python/Django setup on a per-project basis. This means that any changes you make to one website won't affect any others you're also developing. Neat, right?
 
+First, locate a directory in which you want to store your Django project. A good choice for this is your "Home" directory. On Windows, it might look like `C:\Users\<your_name>\` (where `<your_name>` is the name of your login).
 
-#### Create a virtual environment
+You can navigate to that directory in your terminal using the following command:
+
+```sh {title="terminal"}
+cd ~
+```
+
+#### Create a project directory
 
 For this tutorial we will be using a new directory bakery_site from your home directory:
 
 ```sh {title="terminal"}
-mkdir bakery_site
+uv init bakery_site --bare
+```
+
+This tells UV to set up a new project directory for you. 
+
+Next change directory into your new `bakery_site/` directory with the `cd` command like so:
+
+```sh {title="terminal"}
 cd bakery_site
 ```
 
-We will make a virtualenv called `myvenv`. The general command will be in the format:
-
-{{< tabs groupid="a" >}}
-{{% tab title="_**MacOS/Linux**_" %}}
-```sh
-python3 -m venv myvenv
-```
-{{% /tab %}}
-{{% tab title="_**Windows**_" %}}
-```sh
-python -m venv myvenv
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-Where myvenv is the name of your virtualenv. You can use any other name, but stick to lowercase and use no spaces, accents or special characters. It is also a good idea to keep the name short – you'll be referencing it a lot!
-
-
-#### Working with virtualenv
-
-The command above will create a directory called myvenv (or whatever name you chose) that contains our virtual environment (basically a bunch of directories and files).
-
-Start your virtual environment by running:
-
-{{< tabs groupid="a">}}
-{{% tab title="_**MacOS/Linux**_" %}}
-```sh
-source myvenv/bin/activate
-```
-{{% /tab %}}
-{{% tab title="_**Windows**_" %}}
-```sh
-myvenv\Scripts\activate
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-#### Install Django
-
-OK, we have all important dependencies in place. We can finally install Django!
-
-Before we do that, we should make sure we have the latest version of pip, the software that we use to install Django:
-
-1. Ensure you have the latest **pip**:
+Let's take a quick look at what UV created for us using the `ls` command:
 
 ```sh {title="terminal"}
-pip install --upgrade pip
+ls
 ```
 
-2. Find your `bakery_site` folder on your device and open it in VS Code. Create a `requirements.txt` file and add:
+You should see one file listed: `pyproject.toml`. UV uses this file to keep track of the details of your project.
 
-```
-Django~=5.1.2
-```
-Hit save, and head back to your terminal.
+#### Add Django As a Dependency
 
-3. Install dependencies:
+We need to tell UV that this project will use Django. The command for that is simple:
 
 ```sh {title="terminal"}
-pip install -r requirements.txt
+uv add django
 ```
-This is telling your machine to go and look at the requirements file we just created and install the things created within. If you're having any issues with this step, grab a mentor.
+
+This will add Django to the list of "project dependencies" in your `pyproject.toml` file. You can check this by running:
+
+```sh {title="terminal"}
+cat pyproject.toml
+```
+
+You should see something like:
+
+```sh {title="terminal"}
+[project]
+name = "bakery_site"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.0.6",
+]
+```
+
+#### Create the Virtual Environment and Install Dependencies
+
+Here it is - we are now ready to install Django. The command to run is:
+
+```sh {title="terminal"}
+uv sync
+```
+
+This creates a virtual environment folder for you (with the directory name `.venv/`), and installs any listed dependencies.
+
+When you use UV to run a python command, UV will automatically use your virtual environment if one is present. You can also manually activate your virtual environment if you need - the command to do this was displayed in the output when you created your virtual environment. (Probably something like `source .venv/bin/activate`, or `.venv\Scripts\Activate.ps1`)
+
+---
+
+Congrats, you are ready to Django!

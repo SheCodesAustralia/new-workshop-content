@@ -12,11 +12,18 @@ Part of this chapter is based on tutorials by Geek Girls Carrots (https://github
 
 Let's write some code!
 
-We want to open up a Python console, so open Terminal (on Mac) or PowerShell (on Windows) and type in `python` on Windows or `python3` on Mac/Linux and hit `enter`.
+We want to open up a "Python console", so that we can run some Python code commands. To do this, just open Terminal (on Mac) or PowerShell (on Windows) and invoke Python by typing the following command and then hitting `Enter`:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```bash {title="terminal"}
-$ python3
+uv run python
+```
+
+That tells UV to fire up the default version of Python for you. You should  see an output something like this:
+
+<!-- {% filename %}command-line{% filename %} -->
+```bash {title="terminal"}
+$ uv run python
 Python 3.12.4 (...)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
@@ -599,7 +606,7 @@ On a Mac, the command will look something like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```sh {title="terminal"}
-$ cd ~/Desktop
+cd ~/Desktop
 ```
 <!--endsec-->
 
@@ -610,24 +617,24 @@ On Linux, it will be like this (the word "Desktop" might be translated to your l
 
 <!-- {% filename %}command-line{% filename %} -->
 ```sh {title="terminal"}
-$ cd ~/Desktop
+cd ~/Desktop
 ```
 
 <!--endsec-->
 
 <!--sec data-title="Windows" data-id="python_windows" data-collapse=true ces-->
 
-And on Windows, it will be like this:
+And on Windows, it **might** be like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```sh {title="terminal"}
-> cd %HomePath%\Desktop
+cd ~\Desktop
 ```
 <!--endsec-->
 
 {{% notice tip %}}
 
-If you get stuck, just ask for help.
+This command depends a bit on your personal laptop's setup and filenames, so you might run into errors. If you get stuck, just ask for help.
 
 {{% /notice %}}
 
@@ -635,15 +642,8 @@ Now use Python to execute the code in the file like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hello, She Codes!
-```
-
-Note: on Windows 'python3' is not recognised as a command. Instead, use 'python' to execute the file:
-
-<!-- {% filename %}command-line{% filename %} -->
-```python {title="python"}
-> python python_intro.py
 ```
 
 Alright! You just ran your first Python program that was saved to a file. Feel awesome?
@@ -665,7 +665,7 @@ If we were to save and run this, we'd see an error like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 File "python_intro.py", line 2
          ^
 SyntaxError: unexpected EOF while parsing
@@ -685,11 +685,9 @@ Save it and give it another run:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 It works!
 ```
-
-Note: Remember that on Windows, 'python3' is not recognised as a command. From now on, replace 'python3' with 'python' to execute the file.
 
 ### What if a condition isn't True?
 
@@ -707,7 +705,7 @@ When this is run it will print out:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 5 is indeed greater than 2
 ```
 
@@ -728,7 +726,7 @@ and executed:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hey Sonja!
 ```
 
@@ -757,7 +755,7 @@ Python runs through each test in sequence and prints:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Perfect, I can hear all the details
 ```
 
@@ -818,7 +816,7 @@ Let's run this now and see what happens:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hi there!
 How are you?
 ```
@@ -854,7 +852,7 @@ Remember: The `print` function is indented four spaces within the `if` statement
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Traceback (most recent call last):
 File "python_intro.py", line 10, in <module>
   hi()
@@ -874,7 +872,7 @@ And run it again:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hi Kate!
 ```
 
@@ -889,7 +887,7 @@ And run it:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hi Sonja!
 ```
 
@@ -916,7 +914,7 @@ Let's call the code now:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hi Rachel!
 ```
 
@@ -967,7 +965,7 @@ And when we run it:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ python3 python_intro.py
+$ uv run python_intro.py
 Hi Rachel!
 Next girl
 Hi Monica!

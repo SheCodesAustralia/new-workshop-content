@@ -6,7 +6,9 @@ chapter: false
 
 In general, games are more fun if you get to compete against an opponent. For Space Turtle Chomp, this is very easy to do. Because we have already written all the code, we just need to create an opponent section, copy and paste it, and then modify our existing code.
 
->**Step 1.**  First we need to create a new turtle object as the opponent, move to the end of the \#Create player turtle section and add:
+### Step 1.
+
+First we need to create a new turtle object as the opponent, move to the end of the \#Create player turtle section and add:
 
 ```python {title="python"}
 # Create opponent turtle
@@ -17,17 +19,23 @@ comp.penup()
 comp.setposition(random.randint(-290, 290), random.randint(-290, 290))
 ```
 
->**Step 2.** Save your game as kbgame10 and run your module.
+### Step 2.
+
+Save your game as kbgame10 and run your module.
 
 You now have a red opponent space turtle, but you’ll notice that it doesn’t move. Let’s make it move around the screen and add the boundary checking so it doesn’t run away.
 
->**Step 3.** To move your opponent turtle add the following code to the while True loop under player.forward\(speed\)
+### Step 3.
+
+To move your opponent turtle add the following code to the while True loop under player.forward\(speed\)
 
 ```python {title="python"}
     comp.forward(12)
 ```
 
->**Step 4.** Next, copy the following text and paste it directly underneath. Note: The below example is in the format for macOS. If you are on Windows, yours will look slightly different:
+### Step 4.
+
+Next, copy the following text and paste it directly underneath. Note: The below example is in the format for macOS. If you are on Windows, yours will look slightly different:
 
 ```python {title="python"}
     # Boundary Player Checking x coordinate
@@ -41,7 +49,9 @@ You now have a red opponent space turtle, but you’ll notice that it doesn’t 
         os.system("afplay bounce.mp3&")
 ```
 
->**Step 5.** Edit the pasted text to:
+### Step 5.
+
+Edit the pasted text to:
 
 ```python {title="python"}
     # Boundary Comp Checking x coordinate
@@ -61,17 +71,23 @@ You can make the comp.forward speed faster or slower by changing the number with
 
 {{% /notice %}}
 
->**Step 6.**  Save and run your module.
+### Step 6.
+
+Save and run your module.
 
 Now your opponent turtle is moving around the screen and bouncing off the walls. Next, we want to give them a score.
 
->**Step 7.**  Within the \# Create variable score section add:
+### Step 7.
+
+Within the \# Create variable score section add:
 
 ```python {title="python"}
 comp_score = 0
 ```
 
->**Step 8.** Now you create your competition score just under your \# Create opponent turtle section by adding:
+### Step 8.
+
+Now you create your competition score just under your \# Create opponent turtle section by adding:
 
 ```python {title="python"}
 # Create competition score
@@ -80,7 +96,9 @@ mypen2.color('red')
 mypen2.hideturtle()
 ```
 
->**Step 9.** Now copy the player collision checking section and paste direct below. Note: this example code is the version for Windows, if you are on a mac yours will look slightly different:
+### Step 9.
+
+Now copy the player collision checking section and paste direct below. Note: this example code is the version for Windows, if you are on a mac yours will look slightly different:
 
 ```python {title="python"}
     # Collision checking
@@ -96,7 +114,9 @@ mypen2.hideturtle()
         mypen.write(scorestring, False, align='left', font=('Arial', 14, 'normal'))
 ```
 
->**Step 10.**  Edit the pasted code, changing player to comp, score to comp_score, mypen to mypen2 and set the position of the opponent's score. It should look something like the below:
+### Step 10.
+
+Edit the pasted code, changing player to comp, score to comp_score, mypen to mypen2 and set the position of the opponent's score. It should look something like the below:
 
 ```python {title="python"}
     # Comp Collision checking
@@ -114,7 +134,9 @@ mypen2.hideturtle()
         mypen2.write(scorestring, False, align='left', font=('Arial', 14, 'normal'))
 ```
 
->**Step 11.** Save and run your module.
+### Step 11.
+
+Save and run your module.
 
 Your code should look like this: 
 

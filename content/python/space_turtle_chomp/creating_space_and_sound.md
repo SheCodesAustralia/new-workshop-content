@@ -6,21 +6,28 @@ chapter: false
 
 So, you now have your space turtle running around the screen chasing and chomping moving space cabbages. Now, you want to add a nice background and sounds to your game.
 
->**Step 1.**  The first thing we want to do is download the background image and sound files into the folder where your kbgame files are stored. You can do this by selecting the image file here: 
+### Step 1.
+
+The first thing we want to do is download the background image and sound files into the folder where your kbgame files are stored. You can do this by selecting the image file here:
 
 [kbgame-bg.gif](/python/space_turtle_chomp/src/kbgame-bg.gif)
 
 {{< tabs groupid="a">}}
 {{% tab title="_**Windows**_" %}}
 
-**Step 2.** For Windows users download the following .wav files:
+### Step 2.
+
+For Windows users download the following .wav files:
 
 * [bounce.wav](/python/space_turtle_chomp/src/bounce.wav)
 * [chomp.wav](/python/space_turtle_chomp/src/chomp.wav)
 {{% /tab %}}
 
 {{% tab title="_**MacOS**_" %}}
-**Step 2.** For Apple Mac users download the following .mp3 files:
+
+### Step 2.
+
+For Apple Mac users download the following .mp3 files:
 
 * [bounce.mp3](/python/space_turtle_chomp/src/bounce.mp3)
 * [chomp.mp3](/python/space_turtle_chomp/src/chomp.mp3)
@@ -28,13 +35,17 @@ So, you now have your space turtle running around the screen chasing and chompin
 {{% /tab %}}
 {{< /tabs >}}
 
->**Step 3.**  You load the background image by adding wn.bgpic() to the #Set up screen section after wn.bgcolor\('navy'\) :
+### Step 3.
+
+You load the background image by adding wn.bgpic() to the #Set up screen section after wn.bgcolor\('navy'\) :
 
 ```python {title="python"}
 wn.bgpic('kbgame-bg.gif')
 ```
 
->**Step 4.**  The space cabbages are currently the same size as your turtle. Let's make them smaller and add a few more. 
+### Step 4.
+
+The space cabbages are currently the same size as your turtle. Let's make them smaller and add a few more.
  
 You can add more by tweaking the `maxFoods` variable that you defined earlier: 
 
@@ -51,7 +62,9 @@ for count in range(maxFoods):
     new_food.shapesize(.5)
 ```
 
->**Step 5.**  Save your game as kbgame8 and run your module.
+### Step 5.
+
+Save your game as kbgame8 and run your module.
 
 {{% notice note %}}
 
@@ -64,7 +77,9 @@ Now we need to add the sound. This, again, is fairly simple but we use a differe
 {{< tabs groupid="a">}}
 {{% tab title="_**Windows**_" %}}
 
-**Step 6.**  For Windows you need to inform the Python program to use the audio features of
+### Step 6.
+
+For Windows you need to inform the Python program to use the audio features of
  your Windows computer you do this by importing the winsound commands by typing
  the following at the top of your application with the other imports:
 
@@ -72,7 +87,9 @@ Now we need to add the sound. This, again, is fairly simple but we use a differe
 import winsound
 ```
 
-**Step 7.**  Now in the \#boundary checking section we type the following
+### Step 7.
+
+Now in the \#boundary checking section we type the following
  winsound.PlaySound... code at the end of each boundary and collision
  checking section
 
@@ -119,13 +136,17 @@ The SND\_ASYNC tells the computer to play the sound in the background so the gam
 {{% /tab %}}
 {{% tab title="_**MacOS**_" %}}
 
-**Step 6.**  For Apple Mac you need to inform the Python program to use the audio features of your Apple Mac you do this by importing the OS \(operating system\) commands by typing the following at the top of your application with the other import's:
+### Step 6.
+
+For Apple Mac you need to inform the Python program to use the audio features of your Apple Mac you do this by importing the OS \(operating system\) commands by typing the following at the top of your application with the other import's:
 
 ```python {title="python"}
 import os
 ```
 
-**Step 7.**  Now in the \#boundary checking section we type the following os.system...
+### Step 7.
+
+Now in the \#boundary checking section we type the following os.system...
  code at the end of each boundary and collision checking section:
 
 ```python {title="python"}
@@ -171,15 +192,21 @@ The little ‘&’ after .mp3 tells the computer to play the sound in the backgr
 {{% /tab %}}
 {{< /tabs >}}
 
->**Step 8.**  Save and run your module
+### Step 8.
 
->**Step 9.**  Now you can change the background to black to make the game look better by editing the wn.bgcolor.. to:
+Save and run your module
+
+### Step 9.
+
+Now you can change the background to black to make the game look better by editing the wn.bgcolor.. to:
 
 ```python {title="python"}
 wn.bgcolor('black')
 ```
 
->**Step 10.**  Save and run your module.
+### Step 10.
+
+Save and run your module.
 
 Your code should look like this: 
 

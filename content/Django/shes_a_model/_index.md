@@ -3,13 +3,13 @@ title: "She's a Model"
 weight: 6
 chapter: false
 ---
-So we've got a page but its all hardcoded and manual. That's no fun, we want dynamic data. Let's start by getting ourselves a database to store that data in.
+So we've got a page but it's all hardcoded and manual. That's no fun, we want dynamic data. Let's start by getting ourselves a database to store data in so that we can let our website update it in real time.
 
 ### Set up a database
 
 There's a lot of different database software that can store data for your site. We'll use the default one, `sqlite3`.
 
-This is already set up in this part of your `mysite/settings.py` file:
+Our `settings.py` file is already set up to work with that database type. It looks like this:
 
 ```python {title="django"}
 DATABASES = {
@@ -20,27 +20,17 @@ DATABASES = {
 }
 ```
 
-To create a database for our app, let's run the following in the console: `python manage.py migrate` (we need to be in the `bakery_site` directory that contains the `manage.py` file). If your server is still running, press Control + C to stop it to run the next command.
+To create our database, let's run the following command in the console (remember - we need to be in the `bakery_site` directory that contains the `manage.py` file). 
 
-{{< tabs groupid="a">}}
-{{% tab title="_**should work**_" %}}
-```sh {title="terminal"}
-python manage.py runserver
-```
-{{% /tab %}}
-{{% tab title="_**if it doesn't work**_" %}}
-```sh {title="terminal"}
-python3 manage.py runserver
-```
-{{% /tab %}}
-{{< /tabs >}}
+> If your server is still running, press Control + C to stop it.
 
+```sh {title="terminal"}
+uv run manage.py migrate
+```
 
 If that goes well, you should see something like this:
 
 ```
-
-(myvenv)  bakery_site% python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Running migrations:
@@ -69,7 +59,7 @@ And we're done! Time to start the web server and see if our website is working! 
 
 ### Django Models
 
-What we want to create is something that will store all the details about local bakeries and their scrumptious offerings in our bakery_project app. But to be able to do that, we need to talk a little bit about a concept in programming called `objects`.
+What we want to create is something that will store all the details about local bakeries and their scrumptious offerings in our bakeries app. But to be able to do that, we need to talk a little bit about a concept in programming called `objects`.
 
 
 ### Objects
@@ -180,7 +170,7 @@ Double-check that you use two underscore characters (`_`) on each side of `str`.
 
 Let's break that down a bit.
 
-The line starting with `from` or `import` is a line that add some bits from other files. So instead of copying and pasting the same things in every file, we can include some parts with `from ... import ...`.
+The line starting with `from` or `import` is a line that adds some bits from other files. So instead of copying and pasting the same things in every file, we can include some parts with `from ... import ...`.
 
 `class Bakery(models.Model)` – this line defines our model (it is an `object`).
 - `class` is a special keyword that indicates that we are defining an object.
@@ -218,7 +208,7 @@ class Item(models.Model):
     image = models.URLField(null=True, blank=True)
 
     def __str__(self):
-       return self.name
+        return self.name
 
 ```
 {{% /notice %}}
@@ -255,14 +245,19 @@ We are using a `__str__` method again. In this scenario, when we call `__str__()
 
 {{% /notice %}}
 
-If something is still not clear about models, feel free to ask one of the mentors! Spot the purple shirt? Hands up now! We know its a lot to take in but you should be super proud of yourself. Hopefully it looks slightly less magic for you now.
+If something is still not clear about models, feel free to ask one of the mentors! Spot the purple shirt? Hands up now! We know it's a lot to take in but you should be super proud of yourself. Hopefully it looks slightly less magic for you now.
 
 ### Create tables for models in your database
 
-The last step here is to add our new models to our database. First we have to make Django know that we have some changes in our models (we have just created it!). Go to your console window and type `python manage.py makemigrations bakeries`. It will look like this:
+The last step here is to add our new models to our database. First we have to make Django know that we have some changes in our models (we have just created them!). Go to your console window and run the following command:
 
 ```sh {title="terminal"}
-(myvenv) bakery_site% python manage.py makemigrations bakeries
+uv run manage.py makemigrations bakeries
+```
+
+It will look like this:
+
+```
 Migrations for 'bakeries':
   bakeries/migrations/0001_initial.py
     + Create model Bakery
@@ -274,10 +269,15 @@ Migrations for 'bakeries':
 
 {{% /notice %}}
 
-Django prepared a migration file for us that we now have to apply to our database. Type `python manage.py migrate bakeries` and the output should be as follows:
+Django prepared a migration file for us that we now have to apply to our database. Here's the command for that:
 
 ```sh {title="terminal"}
-(myvenv) ~/bakery_site$ python manage.py migrate bakeries
+uv run manage.py migrate bakeries
+```
+
+The output should be as follows:
+
+```
 Operations to perform:
   Apply all migrations: bakeries
 Running migrations:

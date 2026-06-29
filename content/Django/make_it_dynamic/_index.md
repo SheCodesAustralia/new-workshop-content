@@ -183,7 +183,7 @@ Inside our code we should have a snippet that starts with `{% for item in bakery
                 {% for item in bakery.item_set.all %}
                 <li><span>{{ item.name }} - ${{ item.price }}</span>
                     <br />
-                    <img style="width:200px;" src="{{ item.image }}"></a>
+                    <img style="width:200px;" src="{{ item.image }}">
                 </li>
                 {% endfor %}
 ```
