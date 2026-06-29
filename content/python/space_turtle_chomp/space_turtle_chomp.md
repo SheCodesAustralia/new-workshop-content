@@ -11,10 +11,53 @@ We will start off today creating a simple Python game using Python Turtle Graphi
 >**Step 2.**  Select File --&gt; New File. You should now see your program window
 
 >**Step 3.**  Since it is a great idea to save your project at the beginning of any new development, select File --&gt; Save and name the file (I called mine kbgame1.py)
- 
-VS Code may ask if you want to install a Python extension, feel free to follow the prompts and do so.
+> 
+> VS Code may ask if you want to install a Python extension, feel free to follow the prompts and do so.
 
->**Step 4.** When coding one of the first things we should always do as a developer is leave a comment explaining what the program does at the top of the screen. We can make a comment using #
+> **Step 4.** We need to make sure that VS Code knows where to find Python. Here's how to do that:
+>
+> {{< tabs groupid="a">}}
+ {{% tab title="_**MacOS**_" %}}
+
+ Press `Cmd+Shift+P` to open the Command Palette, type **Python: Select Interpreter**, and press `Return`.
+
+ A list of available Python installations will appear. Look for one that mentions `uv` in its path (something like `~/.local/share/uv/python/cpython-.../bin/python`). Select it.
+
+ {{% /tab %}}
+ {{% tab title="_**Linux**_" %}}
+
+ Sorry, but on Linux things get just a little bit more complicated. Linux doesn't always include the graphics library we need (`tkinter`), so we need to install it manually and set up a virtual environment. Here's how:
+
+ Open the VS Code terminal (`Ctrl+`` ` or **View → Terminal**) and run the following commands one at a time:
+
+ ```sh {title="terminal"}
+ sudo apt-get install python3-tk
+ ```
+
+ ```sh {title="terminal"}
+ uv init --bare
+ ```
+
+ ```sh {title="terminal"}
+ uv venv --system-site-packages
+ ```
+
+ The last command creates a virtual environment that has access to the `tkinter` library you just installed.
+
+ Now tell VS Code to use it: press `Ctrl+Shift+P`, type **Python: Select Interpreter**, and press `Enter`. Choose the option that shows `.venv` in its path.
+
+ {{% /tab %}}
+   
+ {{% tab title="_**Windows**_" %}}
+
+ Press `Ctrl+Shift+P` to open the Command Palette, type **Python: Select Interpreter**, and press `Enter`.
+
+ A list of available Python installations will appear. Look for one that mentions `uv` in its path (something like `C:\Users\<your_name>\AppData\Roaming\uv\python\cpython-...\python.exe`). Select it.
+
+ {{% /tab %}}
+> {{< /tabs >}}
+
+>**Step 5.** When coding one of the first things we should always do as a developer is leave a comment explaining what the program does at the top of the screen. We can make a comment using #
 
 An example of a comment is below, try writing the below on the top line. This code won't run, so feel free to write whatever helpful notes you like here:
 
@@ -22,7 +65,7 @@ An example of a comment is below, try writing the below on the top line. This co
 # Turtle Graphics Game – Space Turtle Chomp
 ```
 
->**Step 5.** Next we need to import the Turtle libraries and set up the screen, we do this by typing:
+>**Step 6.** Next we need to import the Turtle libraries and set up the screen, we do this by typing:
 
 ```python {title="python"}
 import turtle

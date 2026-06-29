@@ -11,6 +11,8 @@ We're finally here!
 
 We need Python before we can start. To handle that we will use a tool called `UV`. [Check out the documentation here if you are curious.](https://docs.astral.sh/uv/)
 
+#### Installing UV
+
 UV simplifies the process of installing and running Python, and can help us organise our various Python projects too.
 
 {{< tabs groupid="a">}}
@@ -65,5 +67,14 @@ Congrats, you now have `UV` installed.
 ----
 
 Before continuing with this tutorial you should close and re-open your terminal/PowerShell in order to make sure that your newly installed UV is active.
+
+#### Installing Python
+
+Now that you have UV you can use it to install Python. Here's the command:
+
+<!-- {% filename %}command-line{% endfilename %} -->
+```sh
+uv python install
+```
 
 If you have any doubts, or if something went wrong and you have no idea what to do next, please ask a mentor!
