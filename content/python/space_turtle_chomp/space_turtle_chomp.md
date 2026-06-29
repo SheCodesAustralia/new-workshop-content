@@ -4,13 +4,13 @@ weight: 2
 chapter: false
 ---
 
-We will start off today creating a simple Python game using Python Turtle Graphics. Turtle Graphics is a prebuilt set of python instructions that allow you to create and move characters around the screen allowing you to draw pictures, logos and create simple animations or games.
+We will start off today creating a simple Python game using Python Turtle Graphics. Turtle Graphics is a prebuilt set of python instructions that allow you to create and move characters around the screen, enabling you to draw pictures, logos and create simple animations or games.
 
 >**Step 1.**  If not already open please open VS Code.
 
->**Step 2.**  Select File --&gt; New File you should see your program window
+>**Step 2.**  Select File --&gt; New File. You should now see your program window
 
->**Step 3.**  As it is a great idea to save your project at the beginning of any new development, select File --&gt; Save and name the file (I called mine kbgame1.py)
+>**Step 3.**  Since it is a great idea to save your project at the beginning of any new development, select File --&gt; Save and name the file (I called mine kbgame1.py)
  
 VS Code may ask if you want to install a Python extension, feel free to follow the prompts and do so.
 
@@ -71,7 +71,7 @@ So we create a new turtle variable called player then use the inbuilt turtle att
 
 `player.shape` selects the shape \(you can also use circle, arrow, square and classic\). 
 
-`penup` means that the turtle shape won’t leave a line went it moves \(think of a pen in your hand, penup\(\) you don’t draw, pendown\(\) you do draw).
+`penup` means that the turtle shape won’t leave a line when it moves \(think of a pen in your hand, penup\(\) you don’t draw, pendown\(\) you do draw).
 
 >**Step 7.** Now we set the speed we want our turtle to move across the screen at:
 
@@ -94,7 +94,7 @@ Note the indent of the line starting with player.forward. This indent needs to b
 {{% /notice %}}
 
 This piece of code is slightly different to the code you have written
-before. Instead of telling the computer to perform an instruction *once* you are telling the computer to **repeatedly** perform that instruction *for as long as some condition is true*. You are doing this using what's called a `while` loop. 
+before. Instead of telling the computer to perform an instruction *once*, you are telling the computer to **repeatedly** perform that instruction *for as long as some condition is true*. You are doing this using what's called a `while` loop. 
 
 The syntax of a `while` loop is:
 
@@ -107,9 +107,9 @@ In our example ``<condition>`` is simply the value True, that always evaluates t
 
 >**Step 9.** Now all we need to do is save our code, we can do this by selecting File --&gt; Save \(Ctrl S on Windows or Cmd S on Mac\). Then run the module by selecting Run --&gt; Run Without Debugging \(or pressing Ctrl F5 on Windows or ^F5 on Mac \).
 
-You should see two windows open up a Python Shell window that will have “Python 3.12.4 \(v3.12.4:69c0db5, Aug 11 2017, 17:54:52\) \[MSC v.1900 32 bit \(Intel\)\]…” or something similar written on it and your Turtle window with a Navy background and Dark Orange turtle moving across the screen. Close both the shell and turtle window to return to your programming code.
+You should see two windows open up: a Python Shell window that will have “Python 3.12.4 \(v3.12.4:69c0db5, Aug 11 2017, 17:54:52\) \[MSC v.1900 32 bit \(Intel\)\]…” or something similar written on it and your Turtle window with a Navy background and Dark Orange turtle moving across the screen. Close both the shell and turtle window to return to your programming code.
 
-Before moving onto the next section you can have a play with your code by trying different colours, shapes and speeds and for some fun you could change `player.penup()` to `player.pendown()`
+Before moving on to the next section you can have a play with your code by trying different colours, shapes and speeds and for some fun you could change `player.penup()` to `player.pendown()`
 
 Your code should now look like this:
 

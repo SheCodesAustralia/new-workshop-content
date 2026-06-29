@@ -4,9 +4,9 @@ weight: 6
 chapter: false
 ---
 
-You have collision checking working but as we add more cabbages it makes the code easier if you convert your existing collision code to a function.
+You have collision checking working, but as we add more cabbages, it makes the code easier if you convert your existing collision code to a function.
 
->**Step 1.**  To create as a function we will use the `isCollision` to return a True or False return, to do that type the following at the end of the `#Define functions` section:
+>**Step 1.**  To create this function, we will use the `isCollision` to return a True or False value. To do that, type the following at the end of the `#Define functions` section:
 
 ```python {title="python"}
 def isCollision(t1, t2):
@@ -17,7 +17,7 @@ def isCollision(t1, t2):
            return False
 ```
 
-So your function uses `t1` and `t2` as generic terms instead of turtle and food and uses the same collision formula as before with an if statement that returns a True value if they are in the same location \(collide\) and a False value when they don’t.
+Your function uses `t1` and `t2` as generic terms instead of `turtle` and `food`. It uses the same collision formula as before, featuring an if statement that returns a `True` value if they are in the same location \(collide\) and a `False` value when they don’t.
 
 >**Step 2.**  Now you need to update the code within the while True loop \# Collision checking section to look like:
 
@@ -61,7 +61,7 @@ player.shape("turtle")
 player.penup()
 player.speed(0)
 
-#create food
+#Create food
 food = turtle.Turtle()
 food.color("lightgreen")
 food.shape("circle")
@@ -72,7 +72,7 @@ food.setposition(random.randint(-290, 290), random.randint(-290, 290))
 #Set speed variable
 speed = 1
 
-#Define  functions
+#Define functions
 
 def turn_left():
     player.left(30)
@@ -102,10 +102,10 @@ while True:
     player.forward(speed)
 
     #Boundary Checking x coordinate
-    if player.xcor() > 290 or player.xcor() <-290:
+    if player.xcor() > 290 or player.xcor() < -290:
         player.right(180)
     #Boundary Checking y coordinate
-    if player.ycor() > 290 or player.ycor() <-290:
+    if player.ycor() > 290 or player.ycor() < -290:
         player.right(180)
 
     #Collision checking

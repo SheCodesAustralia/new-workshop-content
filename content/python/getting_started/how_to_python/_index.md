@@ -104,7 +104,7 @@ Nice, huh? To see your name in uppercase letters, try typing:
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
 >>> "Kate".upper()
-'Kate'
+'KATE'
 ```
 
 You just used the `upper` __method__ on your string! A method (like `upper()`) is a sequence of instructions that Python has to perform on a given object (`"Kate"`) once you call it.
@@ -117,7 +117,7 @@ If you want to know the number of letters contained in your name, there is a __f
 4
 ```
 
-Wonder why sometimes you call functions with a `.` at the end of a string (like `"Kate".upper()`) and sometimes you first call a function and place the string in parentheses? Well, in some cases, functions belong to objects, like `upper()`, which can only be performed on strings. In this case, we call the function a __method__. Other times, functions don't belong to anything specific and can be used on different types of objects, just like `len()`. That's why we're giving `"Kate"` as a parameter to the `len` function.
+Wonder why sometimes you call functions with a `.` at the end of a string (like `"Kate".upper()`) and sometimes you first call a function and place the string in parentheses? Well, in some cases, functions belong to objects, like `upper()`, which can only be performed on strings. In this case, we call the function a __method__. Other times, functions don't belong to anything specific and can be used on different types of objects, just like `len()`. That's why we're giving `"Kate"` as a parameter to the `len()` function.
 
 ### Summary
 
@@ -168,7 +168,7 @@ Let's say we want to create a new variable called `name`:
 >>> name = "Kate"
 ```
 
-As you've noticed, your program didn't return anything like it did before. So how do we know that the variable actually exists? Simply enter `name` and hit `enter`:
+As you've noticed, your program didn't return anything like it did before after hitting `enter`. So how do we know that the variable actually exists? Simply type `name` and hit `enter`:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
@@ -392,7 +392,7 @@ Dictionaries, like lists, are *mutable*, meaning that they can be changed after 
 >>> participant['favourite_language'] = 'Python'
 ```
 
-Like lists, using the `len()` method on the dictionaries returns the number of key–value pairs in the dictionary. Go ahead and type in this command:
+Like lists, using the `len()` method on dictionaries returns the number of key–value pairs in the dictionary. Go ahead and type in this command:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
@@ -582,11 +582,11 @@ print('Hello, She Codes!')
 
 Obviously, you're a pretty seasoned Python developer now, so feel free to write some code that you've learned today.
 
-Now we need to save the file and give it a descriptive name. Let's call the file **python_intro.py** and save it to your desktop. We can name the file anything we want, but the important part here is to make sure the file ends in __.py__. The __.py__ extension tells our operating system that this is a **Python executable file** and Python can run it. Try not to use **whitespace** in file name, you can replace space with **_**.
+Now we need to save the file and give it a descriptive name. Let's call the file **python_intro.py** and save it to your desktop. We can name the file anything we want, but the important part here is to make sure the file ends in __.py__. The __.py__ extension tells our operating system that this is a **Python executable file** and Python can run it. Try not to use **whitespace** in file names, you can replace spaces with an underscore **_**.
 
 {{% notice note %}}
 
-**Note** You should notice one of the coolest thing about code editors: colours! In the Python console, everything was the same colour; now you should see that the `print` function is a different colour from the string. This is called "syntax highlighting", and it's a really useful feature when coding. The colour of things will give you hints, such as unclosed strings or a typo in a keyword name (like the `def` in a function, which we'll see below). This is one of the reasons we use a code editor. :)
+**Note** You should notice one of the coolest things about code editors: colours! In the Python console, everything was the same colour; now you should see that the `print` function is a different colour from the string. This is called "syntax highlighting", and it's a really useful feature when coding. The colour of things will give you hints, such as unclosed strings or a typo in a keyword name (like the `def` in a function, which we'll see below). This is one of the reasons we use a code editor. :)
 
 {{% /notice %}}
 
@@ -1001,7 +1001,7 @@ Which would print:
 5
 ```
 
-`range` is a function that creates a list of numbers following one after the other (these numbers are provided by you as parameters).
+`range` is a function that creates a sequence of numbers following one after the other (these numbers are provided by you as parameters).
 
 Note that the second of these two numbers is not included in the list that is output by Python (meaning `range(1, 6)` counts from 1 to 5, but does not include the number 6). That is because "range" is half-open, and by that we mean it includes the first value, but not the last.
 

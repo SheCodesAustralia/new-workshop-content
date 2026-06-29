@@ -4,11 +4,11 @@ weight: 5
 chapter: false
 ---
 
-OK so now you have your turtle that we can move around the screen and if we bump into any of the borders your turtle will bounce off at 180&deg;. 
+OK, so now you have your turtle which you can move around the screen. If it bumps into any of the borders, your turtle will bounce off at 180&deg;. 
 
-Now we need an objective for the game, something for your turtle to do and to score points for doing. For this game you are going to have your turtle chase and chomp space cabbages (because we are making a green circle object for your turtle to chase). You could choose a different colour and shape such as space cheese (e.g. yellow triangle).
+Now we need an objective for the game, something for your turtle to do and to score points for doing. For this game, you are going to have your turtle chase and chomp space cabbages (because we are making a green, circle object for your turtle to chase). You could choose a different colour and shape such as space cheese (e.g. yellow triangle).
 
->**Step 1.**  Create the goal / objective, type the following under a `# Create food` section after `player.speed(0)`
+>**Step 1.**  Create the goal/objective, type the following under a `# Create food` section after `player.speed(0)`
 
 ```python {title="python"}
 # Create food
@@ -35,7 +35,7 @@ food.setposition(-100, 100)
 
 >**Step 4.**  Save and run module kbgame4.
 
->**Step 5.**  Next we need to add collision detection as this will allow us to calculate when your turtle collides with (chomps) the space cabbage. We do this by using a bit of math to work out where the turtle and cabbage is and if they are touching or the distance between them is small. For the math nerds here we will use one of Pythagoras theories. To do that we need to import the math libraries at the top of our application after import turtle:
+>**Step 5.**  Next, we need to add collision detection, as this will allow us to determine when your turtle collides with (chomps) the space cabbage. We do this by using a bit of math to work out where the turtle and cabbage is and if they are touching or the distance between them is small. For the math nerds here, we will use the the Pythagorean theorem. To do that we need to import the math libraries at the top of our application after import turtle:
 
 ```python {title="python"}
 # Turtle Graphics Game – Space Turtle Chomp
@@ -43,7 +43,7 @@ import turtle
 import math
 ```
 
->**Step 6.**  Now we write the math formula that will take the x coordinate of the turtle subtracting from the x coordinate of the cabbage then squaring it and doing the same for the y coordinates for the turtle and cabbage then working out the square root. It’s OK not to completely understand (I’m not sure I do 😄) but you need to type the following at the end of your `While Loop`:
+>**Step 6.**  Now, we will write the math formula. It takes the X-coordinate of the turtle, subtracts it from the X-coordinate of the cabbage, squares the result, does the same for the Y-coordinates, and finally calculates the square root. It’s OK not to completely understand (I’m not sure I do 😄) but you need to type the following at the end of your `While Loop`:
 
 ```python {title="python"}  
 
@@ -55,7 +55,7 @@ import math
 
 {{% notice tip %}}
 
-Make sure that your #collision checking code is indent in the while loop
+Make sure that your #collision checking code is indented in the while loop
 and also that the food.hideturtle() is indented under the if statement.
 
 {{% /notice %}}
@@ -64,7 +64,7 @@ Here we have that if the distance between the turtle and cabbage is less than 20
 
 >**Step 7.** Save and run the module, move your turtle to collide with the cabbage.
 
-Now that works, we want to make the game more interesting as it will be a fairly boring game just to hide the cabbage. To make it more interesting what we will do is once the turtle collides (chomps) the cabbage we will move the cabbage to a random position.
+Now that works, we want to make the game more interesting as it will be a fairly boring game just to hide the cabbage. To make it more interesting, once the turtle collides with (chomps) the cabbage, we will move it to a random position.
 
 For this to work we first need to import the random library at the top of your
  code just under the import math line:
@@ -130,7 +130,7 @@ player.shape("turtle")
 player.penup()
 player.speed(0)
 
-#create food
+#Create food
 food = turtle.Turtle()
 food.color("lightgreen")
 food.shape("circle")
@@ -141,7 +141,7 @@ food.setposition(random.randint(-290, 290), random.randint(-290, 290))
 #Set speed variable
 speed = 1
 
-#Define  functions
+#Define functions
 
 def turn_left():
     player.left(30)
@@ -164,10 +164,10 @@ while True:
     player.forward(speed)
 
     #Boundary Checking x coordinate
-    if player.xcor() > 290 or player.xcor() <-290:
+    if player.xcor() > 290 or player.xcor() < -290:
         player.right(180)
     #Boundary Checking y coordinate
-    if player.ycor() > 290 or player.ycor() <-290:
+    if player.ycor() > 290 or player.ycor() < -290:
         player.right(180)
 
     #Collision checking

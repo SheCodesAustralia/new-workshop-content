@@ -1,12 +1,12 @@
 ---
-title: "60 second, countdown!"
+title: "60-second countdown!"
 weight: 12
 chapter: false
 ---
 
-You have most of your Space Turtle Chomp game developed now, however at the moment it can go on forever, like most games what you can do is set a time limit for the game duration, again this is simple to do.
+You have most of your Space Turtle Chomp game developed now. However, at the moment, it can go on forever. Like most games, what you can do is set a time limit for the game duration, again this is simple to do.
 
->**Step 1.**  Move to the top of your code and import the time function with the other imports:
+>**Step 1.**  Move to the top of your code and import the `time` module with the other imports:
 
 ```python {title="python"}
 import time
@@ -21,7 +21,7 @@ timeout = time.time() + 10*6
 
 {{% notice note %}}
 
-**Note:** We set our game timeout to 6 lots of 10 second for a 1 minute game we could set it to 5 for 30 seconds or 5\*5 for 25 seconds.
+**Note:** We set our game timeout to six lots of 10 seconds for a 1-minute game. We could set it to 5 for 30 seconds or 5*5 for 25 seconds.
 
 {{% /notice %}}
 
@@ -36,7 +36,7 @@ timeout = time.time() + 10*6
 
 {{% notice note %}}
 
-You set a variable called gametime and set it to 0, the if statement then runs the loop until gametime = 6.
+You set a variable called `gametime` and set it to 0. The if statement then runs the loop until gametime == 6.
 
 {{% /notice %}}
 
@@ -57,7 +57,7 @@ else:
     mypen.write("Game Over: You LOSE", False, align="center", font=("Arial", 28, "normal"))
 ```
 
-The if statement compares your score \(player\) against the opponent score \(comp\) and if your score is higher it prints the You Win message and if it is lower it prints the You Lose message.
+The if statement compares your score (player) against the opponent's score (comp_score). If your score is higher, it prints the 'You Win' message, and if it is lower, it prints the 'You Lose' message.
 
 If you run your code now, the game will quit before you can actually read the message. Let’s add a delay so we can see the message.
 
@@ -89,6 +89,6 @@ If you enjoyed this and wanted to continue practising, other things you might wa
 * Making multiple opponents using the List \[\] function like you did for food
 * Setting a start option at the beginning of the game
 * Setting a play again option at the end
-* Setting up a easy, medium and hard option for the game
+* Setting up an easy, medium, and hard option for the game
 
 {{% /notice %}}

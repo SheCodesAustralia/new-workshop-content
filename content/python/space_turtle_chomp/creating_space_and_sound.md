@@ -4,9 +4,9 @@ weight: 9
 chapter: false
 ---
 
-So you now have your space turtle running around the screen chasing and chomping moving space cabbages. Now you want to add a nice background and sounds to your game
+So, you now have your space turtle running around the screen chasing and chomping moving space cabbages. Now, you want to add a nice background and sounds to your game.
 
->**Step 1.**  The first we want to do is download the background image and sound files into the folder where your kbgame files are stored. You can do this by selecting the image file here: 
+>**Step 1.**  The first thing we want to do is download the background image and sound files into the folder where your kbgame files are stored. You can do this by selecting the image file here: 
 
 [kbgame-bg.gif](/python/space_turtle_chomp/src/kbgame-bg.gif)
 
@@ -28,13 +28,13 @@ So you now have your space turtle running around the screen chasing and chomping
 {{% /tab %}}
 {{< /tabs >}}
 
->**Step 3.**  You load the background image by adding the wn.bgpic to the \#Set up screen section after wnbgcolor\('navy'\) :
+>**Step 3.**  You load the background image by adding wn.bgpic() to the #Set up screen section after wn.bgcolor\('navy'\) :
 
 ```python {title="python"}
 wn.bgpic('kbgame-bg.gif')
 ```
 
->**Step 4.**  The space cabbages currently are the same size as your turtle lets makes them smaller and add a few more. 
+>**Step 4.**  The space cabbages are currently the same size as your turtle. Let's make them smaller and add a few more. 
  
 You can add more by tweaking the `maxFoods` variable that you defined earlier: 
 
@@ -59,14 +59,14 @@ If you want to use your own background image you simply need to create an image 
 
 {{% /notice %}}
 
-Now we need to add the sound this again is fairly simple but we use a different function depending on whether you are using a Windows or Apple Mac operating system.
+Now we need to add the sound. This, again, is fairly simple but we use a different function depending on whether you are using a Windows or Apple Mac operating system.
 
 {{< tabs groupid="a">}}
 {{% tab title="_**Windows**_" %}}
 
 **Step 6.**  For Windows you need to inform the Python program to use the audio features of
  your Windows computer you do this by importing the winsound commands by typing
- the following at the top of your application with the other import's::
+ the following at the top of your application with the other imports:
 
 ```python {title="python"}
 import winsound
@@ -162,7 +162,7 @@ import os
 
 {{% notice note %}}
 
-We are playing the bounce sound when either your turtle or the cabbages bounce of the boundary and the chomp sound when you collide with a cabbage.
+We are playing the bounce sound when either your turtle or the cabbages bounce off the boundary and the chomp sound when you collide with a cabbage.
 
 {{% /notice %}}
 
@@ -179,7 +179,7 @@ The little ‘&’ after .mp3 tells the computer to play the sound in the backgr
 wn.bgcolor('black')
 ```
 
->**Step 10.**  Save and Run your model.
+>**Step 10.**  Save and run your module.
 
 Your code should look like this: 
 
