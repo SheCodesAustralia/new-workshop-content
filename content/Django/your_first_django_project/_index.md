@@ -13,40 +13,31 @@ Ready to get going?
 
 {{% notice note %}}
 
-Remember to run everything in the virtualenv. If you don't see a prefix `(myvenv)` in your console, you need to activate your virtualenv. Feel free to flick back to the installation section for a refresher on what it is. Typing `myvenv\Scripts\activate` on Windows or
-`source myvenv/bin/activate` on MacOS or Linux will do this for you.
+Some of the following instructions use the terminal. If you're working in Windows, you should use **PowerShell**. On Mac it would be the **Mac Terminal**. On Linux you can use any Bash compatible shell. There were instructions on opening the terminal in the Python installation content. 
+
+Make sure you're working in the project directory that we created in those instructions. If you need to you can use the `cd` command to navigate to it. For most of you that probably looks like:
+
+1. ```sh {title="terminal"}
+    cd ~
+    ```
+
+2. ```sh {title="terminal"}
+    cd bakery_site
+    ```
 
 {{% /notice %}}
 
 ## Create Project
 
-{{< tabs groupid="a">}}
-{{% tab title="_**MacOS/Linux**_" %}}
-In your macOS or Linux console, run the following command. Don’t forget to add the period (or dot) `.` at the end! The period `.` is essential because it tells the script to install Django in your current directory (fun fact: the period `.` is a short-hand reference).
+To create the skeleton of the Django project, run the following command in your terminal:
 
+```sh {title="terminal"}
+uv run django-admin startproject bakery_project .
 ```
-(myvenv) bakery_site% django-admin startproject bakery_project .
-```
-{{% /tab %}}
-{{% tab title="_**Windows**_" %}}
-On your Windows terminal, run the following command. Don’t forget to add the period (or dot) `.` at the end! The period `.` is essential because it tells the script to install Django in your current directory (fun fact: the period `.` is a short-hand reference).
-
-```
-(myvenv) C:\Users\Name\bakery_site django-admin.exe startproject bakery_project .
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-{{% notice note %}}
-
-When typing the command above, remember that you only type the part which starts with django-admin. The `(myvenv) ~/bakery_site$` part shown here is just example of what your command line will be showing, waiting for your instructions. Yours may look different if your file is called something different or based on the settings on your device. If you're unsure - check in with a mentor!
-
-{{% /notice %}}
 
 ## Understanding Your Project Structure
 
-
-`django-admin.py` is a script that will create the directories and files for you. You should now have a directory structure which looks like this:
+`django-admin` is a Django command that creates a templated Django project for you. You should now have a directory structure which looks like this:
 
 ```
 bakery_site
@@ -57,19 +48,27 @@ bakery_site
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── myvenv
+├── .venv
 │   └── ...
-└── requirements.txt
+├── pyproject.toml
+└── uv.lock
 ```
-
 
 {{% notice note %}}
 
-In your directory structure, you will also see your `myvenv` directory that we created before.
+- `django-admin` created:
+  - the `manage.py` file 
+  - the entire `bakery_project/` directory, which contains:
+    - `asgi.py`
+    - `settings.py`
+    - etc...
+- You can also see: 
+  - the virtual environment file (`.venv/`) that we created earlier
+  - the `pyproject.toml` and `uv.lock` files that UV is using to manage our project for us.
 
 {{% /notice %}}
 
-Lets walk through what some of these files are.
+Let's walk through what some of these files are.
 
 The `manage.py` is a script that helps with management of the site. One of the things this file lets us do is to start a web server on our computer without installing anything else.
 
@@ -81,20 +80,21 @@ We can ignore the other files for now as we won't change them - the only thing t
 
 ### Let's run it!
 
-Before we get too carried away, lets check your Django project works. You need to be in the directory that contains the `manage.py` file (the `bakery_site` directory). In the console, we can start the web server by running `python manage.py runserver`:
+Before we get too carried away, let's check your Django project works. In the console, we can start the web server as follows:
 
 ```sh {title="terminal"}
-(myvenv) bakery_site% python manage.py runserver
+uv run manage.py runserver
 ```
 
-
+{{% notice note %}}
 
 If you are on Windows and this fails with `UnicodeDecodeError`, use this command instead:
 
 ```sh {title="terminal"}
-(myvenv) bakery_site% python manage.py runserver 0:8000
+uv run manage.py runserver 0:8000
 ```
 
+{{% /notice %}}
 
 Now you need to check that your website is running. Open your browser ( eg Firefox, Chrome, Safari etc) and enter this address:
 
@@ -112,7 +112,9 @@ Congratulations! You've just created your first website and run it using a web s
 
 Note that a command window can only run one thing at a time, and the command window you opened earlier is running the web server. As long as the web server is running and waiting for additional incoming requests, the terminal will accept new text but will not execute new commands.
 
-To type additional commands while the web server is running, open a **new terminal window** and activate your **virtualenv**. To stop the web server, switch back to the window in which it's running and press **CTRL+C** (Control and C keys together). Psst, if that doesn't work on Windows, you might have to press Ctrl+Break.
+To type additional commands while the web server is running, open a **new terminal window** and navigate to the project directory as before. To stop the web server, switch back to the window in which it's running and press **CTRL+C** (Control and C keys together). 
+
+> Psst, if that doesn't work on Windows, you might have to press Ctrl+Break.
 
 {{% /notice %}}
 

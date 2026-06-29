@@ -148,10 +148,10 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/Django/your_first_django_project/_index.md](content/Django/your_first_django_project/_index.md)
 
-- [ ] **django-admin** — macOS/Linux: `django-admin startproject bakery_project .`.
-- [ ] **django-admin** — Windows: `django-admin.exe startproject bakery_project .`.
-- [ ] **Invoke** — `python manage.py runserver`.
-- [ ] **Invoke** — Windows `UnicodeDecodeError` fix: `python manage.py runserver 0:8000`.
+- [x] **django-admin** — macOS/Linux: `django-admin startproject bakery_project .`.
+- [x] **django-admin** — Windows: `django-admin.exe startproject bakery_project .`.
+- [x] **Invoke** — `python manage.py runserver`.
+- [x] **Invoke** — Windows `UnicodeDecodeError` fix: `python manage.py runserver 0:8000`.
 
 ### [content/Django/lets_get_appy/_index.md](content/Django/lets_get_appy/_index.md)
 
@@ -213,3 +213,9 @@ For questions about the workshop content or technical issues, please create an i
 - Swapped terminal advice for Windows users to use Powershell instead of cmd
 - Standardised all Python install instructions to use UV
 - Standardised venv management to use UV too. 
+
+## [Your First Django Project](content/Django/your_first_django_project/_index.md)
+- Standardised the terminal navigation instructions
+- Create project step now uses `uv run`
+- Updated project structure diagram and added explanations of where things came from
+- `runserver` instructions now use `uv run`
