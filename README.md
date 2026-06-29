@@ -162,9 +162,9 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/Django/shes_a_model/_index.md](content/Django/shes_a_model/_index.md)
 
-- [ ] **Invoke** — `python manage.py migrate`.
-- [ ] **Invoke** — `python manage.py makemigrations bakeries`.
-- [ ] **Invoke** — `python manage.py migrate bakeries`.
+- [x] **Invoke** — `python manage.py migrate`.
+- [x] **Invoke** — `python manage.py makemigrations bakeries`.
+- [x] **Invoke** — `python manage.py migrate bakeries`.
 
 ### [content/Django/django_admin/_index.md](content/Django/django_admin/_index.md)
 
@@ -225,3 +225,10 @@ For questions about the workshop content or technical issues, please create an i
 - updated file tree
 - runserver now uses `uv run`
 - added a sentence to justify why we import `include` but don't yet use it.
+
+## [She's A Model](content/Django/shes_a_model/_index.md)
+- `migrate` command was incorrect - fixed it and standardised to use `uv run`
+- makemigrations command updated to use `uv run`
+- second `migrate` command updated too
+
+## [Django Admin](content/Django/django_admin/_index.md)
