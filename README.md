@@ -127,11 +127,11 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/python/getting_started/how_to_python/_index.md](content/python/getting_started/how_to_python/_index.md)
 
-- [ ] **Invoke** — Open the Python REPL: type `python` (Windows) or `python3` (Mac/Linux).
-- [ ] **Invoke** — Launching the Python console: `python3`.
-- [ ] **Invoke** — Run a script: `python3 python_intro.py`.
-- [ ] **Invoke** — Windows run a script: `python python_intro.py`.
-- [ ] **Invoke** — Re-running `python3 python_intro.py` (repeated throughout the exercises).
+- [x] **Invoke** — Open the Python REPL: type `python` (Windows) or `python3` (Mac/Linux).
+- [x] **Invoke** — Launching the Python console: `python3`.
+- [x] **Invoke** — Run a script: `python3 python_intro.py`.
+- [x] **Invoke** — Windows run a script: `python python_intro.py`.
+- [x] **Invoke** — Re-running `python3 python_intro.py` (repeated throughout the exercises).
 
 ### [content/Django/getting_started/_index.md](content/Django/getting_started/_index.md)
 
@@ -193,3 +193,19 @@ For questions about the workshop content or technical issues, please create an i
 - Modified Mac install instructions to use UV
 - Cut down the various flavours of Linux install instructions to a single blanket UV installation
 - Modified Windows install instructions to use UV
+
+## [How To Python](content/python/getting_started/how_to_python/_index.md)
+- Swapped invocation method to `uv run ...` throughout
+- Removed dimorphic instructions for different operating systems
+- Bugfix: capitalisation:
+
+   ````diff
+   Nice, huh? To see your name in uppercase letters, try typing:
+
+   <!-- {% filename %}command-line{% filename %} -->
+   ```python {title="python"}
+   >>> "Kate".upper()
+   - 'Kate'
+   + 'KATE'
+   ```
+   ````
