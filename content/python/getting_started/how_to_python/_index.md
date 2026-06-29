@@ -606,7 +606,7 @@ On a Mac, the command will look something like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```sh {title="terminal"}
-$ cd ~/Desktop
+cd ~/Desktop
 ```
 <!--endsec-->
 
@@ -617,24 +617,24 @@ On Linux, it will be like this (the word "Desktop" might be translated to your l
 
 <!-- {% filename %}command-line{% filename %} -->
 ```sh {title="terminal"}
-$ cd ~/Desktop
+cd ~/Desktop
 ```
 
 <!--endsec-->
 
 <!--sec data-title="Windows" data-id="python_windows" data-collapse=true ces-->
 
-And on Windows, it will be like this:
+And on Windows, it **might** be like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```sh {title="terminal"}
-> cd %HomePath%\Desktop
+cd ~\Desktop
 ```
 <!--endsec-->
 
 {{% notice tip %}}
 
-If you get stuck, just ask for help.
+This command depends a bit on your personal laptop's setup and filenames, so you might run into errors. If you get stuck, just ask for help.
 
 {{% /notice %}}
 

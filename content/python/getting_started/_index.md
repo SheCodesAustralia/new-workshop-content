@@ -64,6 +64,6 @@ Congrats, you now have `UV` installed.
 
 ----
 
-Before continuing with this tutorial you should close and re-open your terminal/powwershell in order to make sure that your newly installed UV is active.
+Before continuing with this tutorial you should close and re-open your terminal/PowerShell in order to make sure that your newly installed UV is active.
 
 If you have any doubts, or if something went wrong and you have no idea what to do next, please ask a mentor!
