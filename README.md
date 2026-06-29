@@ -168,11 +168,11 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/Django/django_admin/_index.md](content/Django/django_admin/_index.md)
 
-- [ ] **Invoke** — `python manage.py runserver`.
-- [ ] **Invoke** — `python3 manage.py runserver`.
-- [ ] **Invoke** — `python manage.py createsuperuser`.
-- [ ] **Invoke** — `python3 manage.py createsuperuser`.
-- [ ] **Invoke** — `python manage.py createsuperuser`.
+- [x] **Invoke** — `python manage.py runserver`.
+- [x] **Invoke** — `python3 manage.py runserver`.
+- [x] **Invoke** — `python manage.py createsuperuser`.
+- [x] **Invoke** — `python3 manage.py createsuperuser`.
+- [x] **Invoke** — `python manage.py createsuperuser`.
 
 ## Notes
 
@@ -232,3 +232,7 @@ For questions about the workshop content or technical issues, please create an i
 - second `migrate` command updated too
 
 ## [Django Admin](content/Django/django_admin/_index.md)
+- Standardise `runserver` command to `uv run`
+- Ditto for `createsuperuser`
+- Removed leftover language referring to blog posts - this is a bakery app now
+- Bakery Item table had a "Description" column but the model doesn't have that attribute. Replaced it with a "price" column
