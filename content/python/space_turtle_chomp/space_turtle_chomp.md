@@ -6,58 +6,60 @@ chapter: false
 
 We will start off today creating a simple Python game using Python Turtle Graphics. Turtle Graphics is a prebuilt set of python instructions that allow you to create and move characters around the screen, enabling you to draw pictures, logos and create simple animations or games.
 
->**Step 1.**  If not already open please open VS Code.
+### Step 1.
 
->**Step 2.**  Select File --&gt; New File. You should now see your program window
+If not already open please open VS Code.
 
->**Step 3.**  Since it is a great idea to save your project at the beginning of any new development, select File --&gt; Save and name the file (I called mine kbgame1.py)
-> 
-> VS Code may ask if you want to install a Python extension, feel free to follow the prompts and do so.
+### Step 2.
 
-> **Step 4.** We need to make sure that VS Code knows where to find Python. Here's how to do that:
->
-> {{< tabs groupid="a">}}
- {{% tab title="_**MacOS**_" %}}
+Select File --&gt; New File. You should now see your program window
 
- Press `Cmd+Shift+P` to open the Command Palette, type **Python: Select Interpreter**, and press `Return`.
+### Step 3.
 
- A list of available Python installations will appear. Look for one that mentions `uv` in its path (something like `~/.local/share/uv/python/cpython-.../bin/python`). Select it.
+Since it is a great idea to save your project at the beginning of any new development, select File --&gt; Save and name the file (I called mine kbgame1.py)
 
- {{% /tab %}}
- {{% tab title="_**Linux**_" %}}
+### Step 4.
 
- Sorry, but on Linux things get just a little bit more complicated. Linux doesn't always include the graphics library we need (`tkinter`), so we need to install it manually and set up a virtual environment. Here's how:
+Next we need to install a Python extension for VS Code.
 
- Open the VS Code terminal (`Ctrl+`` ` or **View → Terminal**) and run the following commands one at a time:
+Click the Extensions icon in the sidebar (or press `Ctrl+Shift+X` on Windows/Linux, `Cmd+Shift+X` on Mac). In the search box, type **Python**. Install the extension called **Python** published by **Microsoft** — it should be the top result.
 
- ```sh {title="terminal"}
- sudo apt-get install python3-tk
- ```
+If VS Code already prompted you to install a Python extension when you saved your `.py` file, you can skip this step.
 
- ```sh {title="terminal"}
- uv init --bare
- ```
+### Step 5.
 
- ```sh {title="terminal"}
- uv venv --system-site-packages
- ```
+We need to make sure that VS Code knows where to find Python. Here's how to do that:
 
- The last command creates a virtual environment that has access to the `tkinter` library you just installed.
+{{< tabs groupid="a">}}
+{{% tab title="_**MacOS**_" %}}
 
- Now tell VS Code to use it: press `Ctrl+Shift+P`, type **Python: Select Interpreter**, and press `Enter`. Choose the option that shows `.venv` in its path.
+Press `Cmd+Shift+P` to open the Command Palette, type **Python: Select Interpreter**, and press `Return`.
 
- {{% /tab %}}
-   
- {{% tab title="_**Windows**_" %}}
+A list of available Python installations will appear. Look for one that mentions `uv` in its path (something like `~/.local/share/uv/python/cpython-.../bin/python`). Select it.
 
- Press `Ctrl+Shift+P` to open the Command Palette, type **Python: Select Interpreter**, and press `Enter`.
+{{% /tab %}}  
+{{% tab title="_**Windows**_" %}}
 
- A list of available Python installations will appear. Look for one that mentions `uv` in its path (something like `C:\Users\<your_name>\AppData\Roaming\uv\python\cpython-...\python.exe`). Select it.
+Press `Ctrl+Shift+P` to open the Command Palette, type **Python: Select Interpreter**, and press `Enter`.
 
- {{% /tab %}}
-> {{< /tabs >}}
+A list of available Python installations will appear. Look for one that mentions `uv` in its path (something like `C:\Users\<your_name>\AppData\Roaming\uv\python\cpython-...\python.exe`). Select it.
 
->**Step 5.** When coding one of the first things we should always do as a developer is leave a comment explaining what the program does at the top of the screen. We can make a comment using #
+{{% /tab %}}
+{{% tab title="_**Linux**_" %}}
+Working with Turtle graphics in Linux is trickier, because Linux doesn't come pre-packaged with everything you need. 
+
+Work together with a mentor to:
+- get a virtual environment set up for your project
+- install tkinter
+- set the `TK_LIBRARY` and `TCL_LIBRARY` environment variables correctly
+- check that everything is working.
+
+{{% /tab %}}
+{{< /tabs >}}
+
+### Step 6.
+
+When coding one of the first things we should always do as a developer is leave a comment explaining what the program does at the top of the screen. We can make a comment using #
 
 An example of a comment is below, try writing the below on the top line. This code won't run, so feel free to write whatever helpful notes you like here:
 
@@ -65,7 +67,9 @@ An example of a comment is below, try writing the below on the top line. This co
 # Turtle Graphics Game – Space Turtle Chomp
 ```
 
->**Step 6.** Next we need to import the Turtle libraries and set up the screen, we do this by typing:
+### Step 7.
+
+Next we need to import the Turtle libraries and set up the screen, we do this by typing:
 
 ```python {title="python"}
 import turtle
@@ -100,7 +104,9 @@ There are lots of colours to choose from.
 It is good practice to leave a comment \(\#\) before your code so you can remember what it does. Your future self will thank you!
 {{% /notice %}}
 
->**Step 6.** Next we create our first Turtle character, we do this by typing:
+### Step 8.
+
+Next we create our first Turtle character, we do this by typing:
 
 ```python {title="python"}
 # Create player turtle
@@ -116,14 +122,18 @@ So we create a new turtle variable called player then use the inbuilt turtle att
 
 `penup` means that the turtle shape won’t leave a line when it moves \(think of a pen in your hand, penup\(\) you don’t draw, pendown\(\) you do draw).
 
->**Step 7.** Now we set the speed we want our turtle to move across the screen at:
+### Step 9.
+
+Now we set the speed we want our turtle to move across the screen at:
 
 ```python {title="python"}
 # Set speed variable
 speed = 1
 ```
 
->**Step 8.** Finally we need the turtle to move and the easiest way to do this is by setting a while loop:
+### Step 10.
+
+Finally we need the turtle to move and the easiest way to do this is by setting a while loop:
 
 ```python {title="python"}
 while True:
@@ -142,15 +152,17 @@ before. Instead of telling the computer to perform an instruction *once*, you ar
 The syntax of a `while` loop is:
 
 ```python {title="python"}
-while <condition>
+while <condition>:
    # do stuff here
 ```
 
 In our example ``<condition>`` is simply the value True, that always evaluates to ``True``. Meaning that our turtle will move forward until the program is closed.
 
->**Step 9.** Now all we need to do is save our code, we can do this by selecting File --&gt; Save \(Ctrl S on Windows or Cmd S on Mac\). Then run the module by selecting Run --&gt; Run Without Debugging \(or pressing Ctrl F5 on Windows or ^F5 on Mac \).
+### Step 11.
 
-You should see two windows open up: a Python Shell window that will have “Python 3.12.4 \(v3.12.4:69c0db5, Aug 11 2017, 17:54:52\) \[MSC v.1900 32 bit \(Intel\)\]…” or something similar written on it and your Turtle window with a Navy background and Dark Orange turtle moving across the screen. Close both the shell and turtle window to return to your programming code.
+Now all we need to do is save our code, we can do this by selecting File --&gt; Save \(Ctrl S on Windows or Cmd S on Mac\). Then run the module by selecting Run --&gt; Run Without Debugging \(or pressing Ctrl F5 on Windows or ^F5 on Mac \).
+
+You should see your Turtle window appear with a Navy background and a Dark Orange turtle moving across the screen. Any program output will appear in VS Code's terminal panel at the bottom of the screen. Close the Turtle window to stop the program and return to your code.
 
 Before moving on to the next section you can have a play with your code by trying different colours, shapes and speeds and for some fun you could change `player.penup()` to `player.pendown()`
 

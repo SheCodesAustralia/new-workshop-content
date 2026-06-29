@@ -6,7 +6,9 @@ chapter: false
 
 In this section, you are going to develop a way of having multiple space cabbages \(food\) moving around the screen for your turtle to chomp. You are going to do this using Python Lists and Loops.
 
->**Step 1.**  First, we create the maximum number of cabbages and an empty list by
+### Step 1.
+
+First, we create the maximum number of cabbages and an empty list by
  editing the `# Create food` section with the following code:
 
 ```python {title="python"}
@@ -15,7 +17,9 @@ maxFoods = 6
 foods = []
 ```
 
->**Step 2.**  Next, you create a for loop using maxFoods as the range updating the code:
+### Step 2.
+
+Next, you create a for loop using maxFoods as the range updating the code:
 
 From this:
 
@@ -43,7 +47,9 @@ for count in range(maxFoods):
 
 We use the `append()` method to add our maximum number of cabbages to the list. This means foods.\[0\] is a turtle object, foods.\[1\] is a turtle object etc. etc.
 
->**Step 3.**  Now, you need to do the same thing for moving the turtle within the \# Move Food around section by changing
+### Step 3.
+
+Now, you need to do the same thing for moving the turtle within the \# Move Food around section by changing
 
 this:
 
@@ -90,7 +96,9 @@ to:
            food.right(180)
 ```
 
->**Step 4.**  Now let’s move \(copy and paste\) your food collision checking code
+### Step 4.
+
+Now let’s move \(copy and paste\) your food collision checking code
  inside the food movement loop. Make sure you indent it so that your code looks like:
 
 ```python {title="python"}
@@ -112,17 +120,23 @@ to:
             food.right(random.randint(0, 360))
 ```
 
->**Step 5.**  Save the game as kbgame7 and run your module.
+### Step 5.
+
+Save the game as kbgame7 and run your module.
 
 You now have multiple cabbages moving around your screen. However, the screen can start to look a bit jumpy. To fix this, we can add the `tracer` method to the program. This tells the computer not to refresh the screen each time and speeds up the animation.
 
->**Step 6.**  Add the tracer method by typing the following at the end of the \#Set up screen area:
+### Step 6.
+
+Add the tracer method by typing the following at the end of the \#Set up screen area:
 
 ```python {title="python"}
 wn.tracer(3)
 ```
 
->**Step 7.**  Save and run your module.
+### Step 7.
+
+Save and run your module.
 
 You can play with your code by increasing the maxFood number.
 

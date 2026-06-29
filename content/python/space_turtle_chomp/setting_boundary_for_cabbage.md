@@ -6,7 +6,9 @@ chapter: false
 
 What you will do next is make the food move around the screen. This is fairly easy to do by using the same forward option we used for your player.
 
->**Step 1.**  Within the While Loop add the following code after the #Boundary Checking Player y coordinate code:
+### Step 1.
+
+Within the While Loop add the following code after the #Boundary Checking Player y coordinate code:
 
 ```python {title="python"}
     # Boundary Player Checking y coordinate
@@ -17,24 +19,34 @@ What you will do next is make the food move around the screen. This is fairly ea
     food.forward(1)
 ```
 
->**Step 2.**  Save your game as kbgame6 and run the module.
+### Step 2.
 
->**Step 3.**  Now your cabbage moves across the screen, but at the moment, it always moves to the right. So, let's make the game more interesting by using the random function again by adding the following to the end of the # Collision checking section:
+Save your game as kbgame6 and run the module.
+
+### Step 3.
+
+Now your cabbage moves across the screen, but at the moment, it always moves to the right. So, let's make the game more interesting by using the random function again by adding the following to the end of the # Collision checking section:
 
 ```python {title="python"}
     food.right(random.randint(0, 360))
 ```
 
->**Step 4.**  The food is moving rather slow so let’s speed it up by changing the forward speed to 3 by updating food.forward with:
+### Step 4.
+
+The food is moving rather slow so let’s speed it up by changing the forward speed to 3 by updating food.forward with:
 
 ```python {title="python"}
 # Move food around
     food.forward(3)
 ```
 
->**Step 5.**  Save and run your module, have a play with different speeds. Your food is now moving around the screen in a random direction. The only problem is that it can move off the screen. This is an easy fix, as you can copy and paste the same code you wrote for your turtle boundary checking and modify it for the food.
+### Step 5.
 
->**Step 6.**  Copy the following code and paste it directly underneath, making sure the indents are aligned:
+Save and run your module, have a play with different speeds. Your food is now moving around the screen in a random direction. The only problem is that it can move off the screen. This is an easy fix, as you can copy and paste the same code you wrote for your turtle boundary checking and modify it for the food.
+
+### Step 6.
+
+Copy the following code and paste it directly underneath, making sure the indents are aligned:
 
 ```python {title="python"}
     # Boundary Player Checking x coordinate
@@ -46,7 +58,9 @@ What you will do next is make the food move around the screen. This is fairly ea
         player.right(180)  
 ```
 
->**Step 7.** Edit the pasted code to change player to food:
+### Step 7.
+
+Edit the pasted code to change player to food:
 
 ```python {title="python"}
     # Boundary Food Checking x coordinate
@@ -60,7 +74,9 @@ What you will do next is make the food move around the screen. This is fairly ea
 
 Now, when your space cabbage hits the boundary, it will bounce off the wall at 180&deg; just like your turtle.
 
->**Step 7.**  Save and run your module.
+### Step 8.
+
+Save and run your module.
 
 Before moving on, have a play with modifying your code, changing the bounce angle and speed of the space cabbage.
 

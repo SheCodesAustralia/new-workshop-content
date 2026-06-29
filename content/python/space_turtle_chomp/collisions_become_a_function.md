@@ -6,7 +6,9 @@ chapter: false
 
 You have collision checking working, but as we add more cabbages, it makes the code easier if you convert your existing collision code to a function.
 
->**Step 1.**  To create this function, we will use the `isCollision` to return a True or False value. To do that, type the following at the end of the `#Define functions` section:
+### Step 1.
+
+To create this function, we will use the `isCollision` to return a True or False value. To do that, type the following at the end of the `#Define functions` section:
 
 ```python {title="python"}
 def isCollision(t1, t2):
@@ -19,7 +21,9 @@ def isCollision(t1, t2):
 
 Your function uses `t1` and `t2` as generic terms instead of `turtle` and `food`. It uses the same collision formula as before, featuring an if statement that returns a `True` value if they are in the same location \(collide\) and a `False` value when they don’t.
 
->**Step 2.**  Now you need to update the code within the while True loop \# Collision checking section to look like:
+### Step 2.
+
+Now you need to update the code within the while True loop \# Collision checking section to look like:
 
 ```python {title="python"}
 # Collision checking
@@ -27,7 +31,9 @@ if isCollision(player, food):
     food.setposition(random.randint(-290, 290), random.randint(-290, 290))
 ```
 
->**Step 3.** Save your game as kbgame5 and run your module.
+### Step 3.
+
+Save your game as kbgame5 and run your module.
 
 Your code should now look like this: 
 

@@ -8,11 +8,15 @@ We will assign keys on the keyboard to control the turtle and help  it move left
 
 But before that we just need to understand a little bit about coding. Most developers do not write their code from top to bottom in one straight go and instead will write a bit of code, test it and then either add more, delete or edit the code. Throughout this coding tutorial, you will need to move to different parts of your program to add and edit. Be careful to read the instructions and make sure you are writing in the correct part of your program and not repeating lines you have already written.
 
->**Step 1.**  A good habit to get into with any coding is to regularly save versions of your code as you make changes as this allows you to either re-use code for other programs or roll back to a working version if something goes wrong. 
+### Step 1.
+
+A good habit to get into with any coding is to regularly save versions of your code as you make changes as this allows you to either re-use code for other programs or roll back to a working version if something goes wrong.
 
 So click File --> Save As and save the file as `kbgame2`
 
->**Step 2.**  We need to set keyboard bindings that tell the computer that when you
+### Step 2.
+
+We need to set keyboard bindings that tell the computer that when you
  push a certain key, it calls a certain function. For this to work we need to set
  the computer to listen for keyboard strokes by typing the following under the
  speed = 1 line:
@@ -37,7 +41,9 @@ This new piece of code sits between setting the speed (line 16) and the start of
 
 {{% /notice %}}
 
->**Step 3.**  The next step is to write the `turn_left`, `turn_right` and  `increase_speed` functions. This will also go under the speed = 1 line; you may need to press Enter a few times to add some blank lines.
+### Step 3.
+
+The next step is to write the `turn_left`, `turn_right` and  `increase_speed` functions. This will also go under the speed = 1 line; you may need to press Enter a few times to add some blank lines.
 
 ```python {title="python"}
 speed = 1
@@ -59,11 +65,17 @@ def increase_speed():
 
 The `global speed` line allows us to modify the speed variable inside our function, increasing the turtle's speed by 1 every time the up arrow key is pressed.
 
->**Step 5.**  Save the file by selecting File --&gt; Save and run your updated program by pressing F5. Then, click on your turtle screen with the mouse and use the left and right arrow keys to move your turtle and the up arrow to increase its speed.
+### Step 4.
 
->**Step 6.**  Close the Turtle and Python Shell windows.
+Save the file by selecting File --&gt; Save and run your updated program by pressing F5. Then, click on your turtle screen with the mouse and use the left and right arrow keys to move your turtle and the up arrow to increase its speed.
 
->**Step 7.**  You might see that the turtle icon jumps a bit when you press the arrow keys, this can be fixed very easily by adding the `player.speed()` method at the end of your `#Create player turtle` section just after `player.penup()`.
+### Step 5.
+
+Close the Turtle window.
+
+### Step 6.
+
+You might see that the turtle icon jumps a bit when you press the arrow keys, this can be fixed very easily by adding the `player.speed()` method at the end of your `#Create player turtle` section just after `player.penup()`.
 
 ```python {title="python"}
 
@@ -75,7 +87,9 @@ player.speed(0)
 0 is the fastest animation speed.
 {{% /notice %}}
 
->**Step 8.**  Save and Run your module again try moving the turtle icon now and then close the Turtle and Python Shell windows.
+### Step 7.
+
+Save and Run your module again try moving the turtle icon now and then close the Turtle window.
 
 {{% notice style="info" title="Challenge!" icon="lightbulb" %}}
 
