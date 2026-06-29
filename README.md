@@ -135,16 +135,16 @@ For questions about the workshop content or technical issues, please create an i
 
 ### [content/Django/getting_started/_index.md](content/Django/getting_started/_index.md)
 
-- [ ] **Install** — "Install Python" section intro.
-- [ ] **Install** — macOS: download the Python 3.x installer from python.org and run it.
-- [ ] **Install** — Windows: download Python from python.org (tick "Add Python 3 to PATH").
-- [ ] **Invoke** — Linux version check: `python3 --version`.
-- [ ] **Install** — Linux: `sudo apt install python3` / `sudo dnf install python3` / `sudo zypper install python3`.
-- [ ] **Venv** — "Set up virtual environment and install Django" section intro.
-- [ ] **Venv** — macOS/Linux: `python3 -m venv myvenv`.
-- [ ] **Venv** — Windows: `python -m venv myvenv`.
-- [ ] **pip** — `pip install --upgrade pip`.
-- [ ] **pip** — `pip install -r requirements.txt`.
+- [x] **Install** — "Install Python" section intro.
+- [x] **Install** — macOS: download the Python 3.x installer from python.org and run it.
+- [x] **Install** — Windows: download Python from python.org (tick "Add Python 3 to PATH").
+- [x] **Invoke** — Linux version check: `python3 --version`.
+- [x] **Install** — Linux: `sudo apt install python3` / `sudo dnf install python3` / `sudo zypper install python3`.
+- [x] **Venv** — "Set up virtual environment and install Django" section intro.
+- [x] **Venv** — macOS/Linux: `python3 -m venv myvenv`.
+- [x] **Venv** — Windows: `python -m venv myvenv`.
+- [x] **pip** — `pip install --upgrade pip`.
+- [x] **pip** — `pip install -r requirements.txt`.
 
 ### [content/Django/your_first_django_project/_index.md](content/Django/your_first_django_project/_index.md)
 
@@ -186,7 +186,7 @@ For questions about the workshop content or technical issues, please create an i
 > [!CAUTION]  
 > Remember to include the following in the PR and then delete from this README.
 
-## [Getting Started](./content/python/getting_started/_index.md)
+## [Getting Started (Python)](./content/python/getting_started/_index.md)
 
 - Removed a section in Mac instructions on checking whether Python is already installed. Irrelevant because we'll be using UV.
 - Removed a section in Mac instructions that told the user to make sure their Mac was configured to allow non-Apple Store installs. Unnecessary because UV is amazing.
@@ -209,3 +209,7 @@ For questions about the workshop content or technical issues, please create an i
    + 'KATE'
    ```
    ````
+## [Getting Started (Django)](content/Django/getting_started/_index.md)
+- Swapped terminal advice for Windows users to use Powershell instead of cmd
+- Standardised all Python install instructions to use UV
+- Standardised venv management to use UV too. 

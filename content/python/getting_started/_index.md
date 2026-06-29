@@ -11,7 +11,7 @@ We're finally here!
 
 We need Python before we can start. To handle that we will use a tool called `UV`. [Check out the documentation here if you are curious.](https://docs.astral.sh/uv/)
 
-`UV` simplifies the process of installing and running Python, and can help us organise our various Python projects too.
+UV simplifies the process of installing and running Python, and can help us organise our various Python projects too.
 
 {{< tabs groupid="a">}}
 {{% tab title="_**MacOS**_" %}}
@@ -63,5 +63,7 @@ Congrats, you now have `UV` installed.
 {{< /tabs >}}
 
 ----
+
+Before continuing with this tutorial you should close and re-open your terminal/powwershell in order to make sure that your newly installed UV is active.
 
 If you have any doubts, or if something went wrong and you have no idea what to do next, please ask a mentor!
