@@ -23,7 +23,7 @@ That tells UV to fire up the default version of Python for you. You should  see 
 
 <!-- {% filename %}command-line{% filename %} -->
 ```bash {title="terminal"}
-$ uv run python
+uv run python
 Python 3.12.4 (...)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
@@ -575,7 +575,7 @@ To exit from the Python interpreter that we've been using, simply type the `exit
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
 >>> exit()
-$
+
 ```
 
 This will put you back into the command prompt.
@@ -589,7 +589,9 @@ print('Hello, She Codes!')
 
 Obviously, you're a pretty seasoned Python developer now, so feel free to write some code that you've learned today.
 
-Now we need to save the file and give it a descriptive name. Let's call the file **python_intro.py** and save it to your desktop. We can name the file anything we want, but the important part here is to make sure the file ends in __.py__. The __.py__ extension tells our operating system that this is a **Python executable file** and Python can run it. Try not to use **whitespace** in file names, you can replace spaces with an underscore **_**.
+Now we need to save the file and give it a descriptive name. Let's call the file **python_intro.py** and **save it to your desktop**. 
+
+We can name the file anything we want, but the important part here is to make sure the file ends in __.py__. The __.py__ extension tells our operating system that this is a **Python executable file** and Python can run it. Try not to use **whitespace** in file names, you can replace spaces with an underscore **_**.
 
 {{% notice note %}}
 
@@ -597,7 +599,9 @@ Now we need to save the file and give it a descriptive name. Let's call the file
 
 {{% /notice %}}
 
-With the file saved, it's time to run it! Using the skills you've learned in the command line section, use the terminal to **change directories** to the desktop.
+With the file saved, it's time to run it! We wrote our code in VS Code, but to run it we will have to jump back into the terminal.
+
+To run a file in the terminal, we first need to find it. We saved our code to the desktop, so we need to use the skills you learned in the command line section to **"change directories"** to your desktop folder. Here's what that looks like.
 
 {{< tabs groupid="a">}}
 {{% tab title="_**Mac**_" %}}
@@ -654,12 +658,11 @@ On Windows, we need to do something a little different. There's no one standard 
 {{% /tab %}}
 {{% /tabs %}}
 
-Now use Python to execute the code in the file like this:
+Now that we're working in the Desktop folder, you can use Python to execute the code you wrote, like so:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
-Hello, She Codes!
+uv run python_intro.py
 ```
 
 Alright! You just ran your first Python program that was saved to a file. Feel awesome?
@@ -681,7 +684,7 @@ If we were to save and run this, we'd see an error like this:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 File "python_intro.py", line 2
          ^
 SyntaxError: unexpected EOF while parsing
@@ -701,7 +704,7 @@ Save it and give it another run:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 It works!
 ```
 
@@ -721,7 +724,7 @@ When this is run it will print out:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 5 is indeed greater than 2
 ```
 
@@ -742,7 +745,7 @@ and executed:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Hey Sonja!
 ```
 
@@ -771,7 +774,7 @@ Python runs through each test in sequence and prints:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Perfect, I can hear all the details
 ```
 
@@ -832,7 +835,7 @@ Let's run this now and see what happens:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Hi there!
 How are you?
 ```
@@ -868,7 +871,7 @@ Remember: The `print` function is indented four spaces within the `if` statement
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Traceback (most recent call last):
 File "python_intro.py", line 10, in <module>
   hi()
@@ -888,7 +891,7 @@ And run it again:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Hi Kate!
 ```
 
@@ -903,7 +906,7 @@ And run it:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Hi Sonja!
 ```
 
@@ -930,7 +933,7 @@ Let's call the code now:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Hi Rachel!
 ```
 
@@ -981,7 +984,7 @@ And when we run it:
 
 <!-- {% filename %}command-line{% filename %} -->
 ```python {title="python"}
-$ uv run python_intro.py
+uv run python_intro.py
 Hi Rachel!
 Next girl
 Hi Monica!
