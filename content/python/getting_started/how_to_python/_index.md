@@ -15,15 +15,14 @@ Let's write some code!
 We want to open up a "Python console", so that we can run some Python code commands. To do this, just open Terminal (on Mac) or PowerShell (on Windows) and invoke Python by typing the following command and then hitting `Enter`:
 
 <!-- {% filename %}command-line{% filename %} -->
-```bash {title="terminal"}
+```bash {title="terminal input"}
 uv run python
 ```
 
 That tells UV to fire up the default version of Python for you. You should  see an output something like this:
 
 <!-- {% filename %}command-line{% filename %} -->
-```bash {title="terminal"}
-uv run python
+```bash {title="terminal output"}
 Python 3.12.4 (...)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
