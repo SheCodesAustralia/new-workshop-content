@@ -599,6 +599,9 @@ Now we need to save the file and give it a descriptive name. Let's call the file
 
 With the file saved, it's time to run it! Using the skills you've learned in the command line section, use the terminal to **change directories** to the desktop.
 
+{{< tabs groupid="a">}}
+{{% tab title="_**Mac**_" %}}
+
 <!--sec data-title="OS X" data-id="python_OSX"
 data-collapse=true ces-->
 
@@ -609,6 +612,10 @@ On a Mac, the command will look something like this:
 cd ~/Desktop
 ```
 <!--endsec-->
+
+{{% /tab %}}
+  
+{{% tab title="_**Linux**_" %}}
 
 <!--sec data-title="Linux" data-id="python_linux"
 data-collapse=true ces-->
@@ -622,21 +629,30 @@ cd ~/Desktop
 
 <!--endsec-->
 
+{{% /tab %}}
+  
+{{% tab title="_**Windows**_" %}}
+
 <!--sec data-title="Windows" data-id="python_windows" data-collapse=true ces-->
 
-And on Windows, it **might** be like this:
+On Windows, we need to do something a little different. There's no one standard location for the Windows Desktop directory, so let's track down where yours is.
 
-<!-- {% filename %}command-line{% filename %} -->
-```sh {title="terminal"}
-cd ~\Desktop
-```
-<!--endsec-->
+1. Open **File Explorer** (you can press `Win + E` or find it in the Start menu).
+2. In the left panel, click on **Desktop** to navigate to your Desktop folder.
+3. Click on the **address bar** at the top of File Explorer — the file location will become selectable text. Copy the full path (e.g. `C:\Users\YourName\Desktop`).
+4. Switch back to your terminal window.
+5. Type `cd '` (note the space in front of the quotation mark), and the paste the file location you just copied. Add another quotation mark (`'`) on the end. That will look something like this, although your filepath will no doubt be different:
 
-{{% notice tip %}}
+    <!-- {% filename %}command-line{% filename %} -->
+    ```sh {title="terminal"}
+    cd 'C:\Users\ollie\OneDrive - NASA\Desktop'
+    ```
 
-This command depends a bit on your personal laptop's setup and filenames, so you might run into errors. If you get stuck, just ask for help.
+    <!--endsec-->
+6. Finally, press `Enter` to change directory to your Desktop.
 
-{{% /notice %}}
+{{% /tab %}}
+{{% /tabs %}}
 
 Now use Python to execute the code in the file like this:
 
