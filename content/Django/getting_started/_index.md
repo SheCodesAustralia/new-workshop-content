@@ -15,66 +15,11 @@ Many of the steps below reference the `console`, `terminal`, `command window`, o
 
 {{% /notice %}}
 
-#### Install Python (via UV)
+### Install Python
 
-Django is written in Python. We need Python to do anything in Django. Let's start by installing it! To handle that we will use a tool called `UV`. [Check out the documentation here if you are curious.](https://docs.astral.sh/uv/)
+You'll need Python installed to follow this tutorial. If you haven't already, head over to the "Python" section in the lefthand panel of this website, and follow the instructions under "Getting Started".
 
-UV simplifies the process of installing and running Python, and can help us organise our various Python projects too.
-
-{{< tabs groupid="a">}}
-{{% tab title="_**MacOS**_" %}}
-
-Open the Mac Terminal by:
-1. Pressing `Command` (⌘) + `Spacebar` to open Spotlight Search
-2. Typing "Terminal" in the search field
-3. Pressing `Return` (Enter) to launch the Terminal
-
-Next, copy-paste the following command into your terminal window, and then hit `Return`:
-
-<!-- {% filename %}command-line{% endfilename %} -->
-```sh
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-Congrats, you now have `UV` installed.
-
-{{% /tab %}}
-{{% tab title="_**Linux**_" %}}
-Open the bash terminal, and run the following command:
-
-<!-- {% filename %}command-line{% endfilename %} -->
-```sh
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-Congrats, you now have `UV` installed.
-
-{{% /tab %}}
-  
-{{% tab title="_**Windows**_" %}}
-
-Open PowerShell by:
-1. Pressing the Windows key
-2. Typing "powershell"
-3. Clicking `Windows PowerShell`
-
-Next, copy-paste the following command into your PowerShell window, and then hit `Return`:
-
-<!-- {% filename %}command-line{% endfilename %} -->
-```sh
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
-
-Congrats, you now have `UV` installed.
-
-{{% /tab %}}
-{{< /tabs >}}
-
-----
-
-Before continuing with this tutorial you should close and re-open your terminal/PowerShell in order to make sure that your newly installed UV is active.
-
-If you have any doubts, or if something went wrong and you have no idea what to do next, please ask a mentor!
+Then come back here and continue below!
 
 ### Install a Code Editor
 

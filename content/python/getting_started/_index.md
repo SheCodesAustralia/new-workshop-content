@@ -66,7 +66,13 @@ Congrats, you now have `UV` installed.
 
 ----
 
-Before continuing with this tutorial you should close and re-open your terminal/PowerShell in order to make sure that your newly installed UV is active.
+{{% notice style="warning" %}}
+
+Before continuing with this tutorial you should close and then re-open your terminal/PowerShell.
+
+This will make sure that your newly installed UV is active. If you don't do this, you might get errors!
+
+{{% /notice %}}
 
 #### Installing Python
 
